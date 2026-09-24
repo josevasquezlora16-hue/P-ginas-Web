@@ -12,8 +12,8 @@ ALOE EVENTOS — web lista para subir
    404.html, sitemap.xml y robots.txt.
 
 4. config.js (el único archivo que debes editar):
-   - whatsapp: número con código de país, solo dígitos (1809/1829/1849...).
-     Sin número, el formulario copia el pedido y abre el chat de Instagram.
+   - whatsapp: ya configurado con 18096100683 (809-610-0683). Los pedidos
+     del formulario se abren directamente en ese WhatsApp.
    - ga4: ID de Google Analytics 4 ("G-XXXXXXX"). Solo se activa si el
      visitante acepta las cookies en el banner. Vacío = sin analítica.
    ¡No pongas NUNCA contraseñas ni claves privadas en config.js: es público!

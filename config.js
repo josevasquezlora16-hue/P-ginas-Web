@@ -7,7 +7,7 @@
     /* Número de WhatsApp con código de país, solo dígitos.
        Ejemplo: "18095551234". Si lo dejas vacío (""), el botón de pedido
        copia el mensaje y abre el chat de Instagram. */
-    whatsapp: "",
+    whatsapp: "18096100683",
 
     instagram: "aloeventsrd",
 
