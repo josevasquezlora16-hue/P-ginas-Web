@@ -1,0 +1,32 @@
+ALOE EVENTOS — web lista para subir
+
+1. Sube TODO el contenido de esta carpeta (incluido el archivo oculto .htaccess)
+   a public_html en Hostinger (Administrador de archivos o FTP).
+   No hace falta subir README.md ni LEEME.txt (igualmente quedan bloqueados).
+
+2. SSL / HTTPS: activa el SSL gratuito en hPanel > Seguridad > SSL ANTES de subir.
+   El .htaccess ya obliga a usar https:// y bloquea archivos internos.
+
+3. DOMINIO: la web usa "https://aloeeventos.com". Si tu dominio es otro,
+   busca y reemplaza ese texto en: index.html, privacidad.html, terminos.html,
+   404.html, sitemap.xml y robots.txt.
+
+4. config.js (el único archivo que debes editar):
+   - whatsapp: número con código de país, solo dígitos (1809/1829/1849...).
+     Sin número, el formulario copia el pedido y abre el chat de Instagram.
+   - ga4: ID de Google Analytics 4 ("G-XXXXXXX"). Solo se activa si el
+     visitante acepta las cookies en el banner. Vacío = sin analítica.
+   ¡No pongas NUNCA contraseñas ni claves privadas en config.js: es público!
+
+5. Google: da de alta el dominio en Google Search Console y envía
+   https://TU-DOMINIO/sitemap.xml
+
+6. Fotos: están en assets/img (aloe-1.webp … aloe-6.webp). Para cambiarlas,
+   reemplaza el archivo manteniendo el mismo nombre (formato .webp, ~460 px,
+   menos de 40 KB; puedes usar squoosh.app para comprimirlas).
+   La imagen al compartir en WhatsApp/redes es assets/img/og-image.jpg (1200×630).
+
+7. Cada vez que subas cambios, cambia ?v=20260924 en los .html por la fecha nueva.
+
+8. Revisa los textos de privacidad.html y terminos.html (plazos de cancelación,
+   anticipo, reclamaciones) y ajústalos a cómo trabajas realmente.
