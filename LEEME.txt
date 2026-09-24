@@ -1,5 +1,8 @@
 ALOE EVENTOS — web lista para subir
 
+PUBLICADA EN: https://aloe-eventos.netlify.app  (Netlify, proyecto "aloe-eventos")
+En Netlify, netlify.toml hace el trabajo del .htaccess (HTTPS, seguridad, 404).
+
 1. Sube TODO el contenido de esta carpeta (incluido el archivo oculto .htaccess)
    a public_html en Hostinger (Administrador de archivos o FTP).
    No hace falta subir README.md ni LEEME.txt (igualmente quedan bloqueados).
@@ -7,7 +10,7 @@ ALOE EVENTOS — web lista para subir
 2. SSL / HTTPS: activa el SSL gratuito en hPanel > Seguridad > SSL ANTES de subir.
    El .htaccess ya obliga a usar https:// y bloquea archivos internos.
 
-3. DOMINIO: la web usa "https://aloeeventos.com". Si tu dominio es otro,
+3. DOMINIO: la web usa "https://aloe-eventos.netlify.app". Si compras un dominio,
    busca y reemplaza ese texto en: index.html, privacidad.html, terminos.html,
    404.html, sitemap.xml y robots.txt.
 
