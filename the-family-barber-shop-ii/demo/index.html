@@ -237,6 +237,52 @@ footer a:hover{color:var(--dorado)}
 .wa-flot svg{width:32px;height:32px;fill:#fff}
 @media (max-width:760px){.barra-movil{display:flex}.wa-flot{display:none}section{padding:64px 0}}
 :focus-visible{outline:3px solid var(--dorado);outline-offset:2px}
+
+/* ===== 3D ===== */
+/* Letras en relieve */
+.hero h1 .script{text-shadow:1px 1px 0 #a5842f,2px 2px 0 #8f7128,3px 3px 0 #7a5f22,4px 4px 0 #644e1c,6px 9px 16px rgba(0,0,0,.55)}
+
+/* Poste de barbero 3D en la portada */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:24px}
+.pole3d{position:relative;min-width:0;height:min(62vh,560px);cursor:grab;touch-action:pan-y;user-select:none}
+.pole3d:active{cursor:grabbing}
+.pole3d::before{content:"";position:absolute;inset:12% 18%;border-radius:50%;background:radial-gradient(closest-side,rgba(200,16,46,.35),rgba(10,47,107,.25) 55%,transparent);filter:blur(30px);pointer-events:none}
+.pole3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.pole-hint{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-size:.78rem;background:rgba(0,0,0,.45);padding:.25rem .8rem;border-radius:999px;white-space:nowrap;pointer-events:none;opacity:.85}
+.sin-3d .pole3d{display:none}
+.sin-3d .hero-grid{grid-template-columns:1fr}
+@media (max-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:0}.pole3d{height:300px;margin-top:12px}.hero{padding-top:64px}}
+
+/* Tarjetas que se inclinan */
+.barbero{position:relative}
+.serv::after,.barbero::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.45),transparent 60%);opacity:0;transition:opacity .3s}
+.tilt{will-change:transform;transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.tilt.moviendo{transition:transform .08s linear,box-shadow .3s;box-shadow:0 25px 45px rgba(0,0,0,.18)}
+.tilt.moviendo::after{opacity:1}
+.serv.tilt{transform-style:preserve-3d}
+.serv.tilt h3,.serv.tilt .precio,.serv.tilt .badge{transform:translateZ(30px)}
+.serv.tilt .btn{transform:translateZ(20px)}
+
+/* Promociones que se voltean */
+.flip{perspective:1100px;cursor:pointer;outline-offset:4px}
+.flip-in{display:grid;height:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.flip.girada .flip-in{transform:rotateY(180deg)}
+@media (hover:hover){.flip:hover .flip-in{transform:rotateY(180deg)}}
+.cara{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.promo.dorso{transform:rotateY(180deg);background:linear-gradient(145deg,var(--rojo),#7d0a1d);border-color:transparent;color:#fff;justify-content:center}
+.promo.dorso h3{color:#fff}
+.promo.dorso p{flex:0}
+.flip-tip{font-size:.75rem;color:#8d877c;margin-top:4px}
+
+/* Secciones que entran girando */
+main{overflow-x:clip}
+.js-3d .reveal{opacity:0;transform:perspective(1100px) rotateX(16deg) translateY(46px);transform-origin:50% 0;transition:opacity .8s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.js-3d .reveal.visible{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .js-3d .reveal{opacity:1;transform:none;transition:none}
+  .flip-in,.tilt{transition:none}
+}
 </style>
 </head>
 <body>
@@ -265,7 +311,8 @@ footer a:hover{color:var(--dorado)}
 <main>
 <!-- INICIO -->
 <section class="hero" id="inicio">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div class="hero-txt">
     <div class="hero-rating"><span class="stars">★★★★★</span><b>4.7</b> en Google · 38 opiniones</div>
     <h1>Aquí no eres cliente, eres <span class="script">familia.</span></h1>
     <p class="lead">Barbería familiar en Residencial Villas Claudia, Santo Domingo. Cortes, barba y paquetes para papá, los muchachos y el abuelo.</p>
@@ -273,6 +320,11 @@ footer a:hover{color:var(--dorado)}
       <a href="#reservar" class="btn btn-rojo">📅 Reserva tu cita</a>
       <a href="https://wa.me/18094423390?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20The%20Family%20Barber%20Shop%20II" target="_blank" rel="noopener" class="btn btn-borde">💬 Escríbenos por WhatsApp</a>
     </div>
+   </div>
+   <div class="pole3d" id="pole3d" aria-hidden="true">
+     <canvas id="pole-canvas"></canvas>
+     <span class="pole-hint">↻ Arrastra para girar</span>
+   </div>
   </div>
 </section>
 
@@ -437,10 +489,22 @@ footer a:hover{color:var(--dorado)}
       <h2>Ser familia tiene sus ventajas</h2>
     </div>
     <div class="promos">
-      <div class="promo"><span class="big">20%</span><h3>Tu primer corte</h3><p>Reserva en línea por primera vez y llévate 20 % de descuento.</p><code>FAMILIA20</code></div>
-      <div class="promo"><span class="big">6.º</span><h3>Corte gratis</h3><p>Con tu tarjeta de fidelidad, el sexto corte va por la casa.</p><div class="sellos"><span class="lleno"></span><span class="lleno"></span><span class="lleno"></span><span></span><span></span><span></span></div></div>
-      <div class="promo"><span class="big">RD$100</span><h3>Trae a un amigo</h3><p>Tú y tu referido reciben RD$100 de descuento en su próximo corte.</p></div>
-      <div class="promo"><span class="big">15%</span><h3>Lunes de familia</h3><p>Lunes y martes, 15 % en todos los Paquetes Family.</p></div>
+      <div class="flip" tabindex="0" role="button" aria-label="Voltear: Tu primer corte"><div class="flip-in">
+        <div class="cara promo"><span class="big">20%</span><h3>Tu primer corte</h3><p>Reserva en línea por primera vez y llévate 20 % de descuento.</p><code>FAMILIA20</code><span class="flip-tip">↻ Gira la tarjeta</span></div>
+        <div class="cara promo dorso"><h3>Cómo usarla</h3><p>Escribe el código <b>FAMILIA20</b> al reservar en línea. Válido en el primer corte de cada cliente. No se acumula con otras promociones.</p></div>
+      </div></div>
+      <div class="flip" tabindex="0" role="button" aria-label="Voltear: Corte gratis"><div class="flip-in">
+        <div class="cara promo"><span class="big">6.º</span><h3>Corte gratis</h3><p>Con tu tarjeta de fidelidad, el sexto corte va por la casa.</p><div class="sellos"><span class="lleno"></span><span class="lleno"></span><span class="lleno"></span><span></span><span></span><span></span></div><span class="flip-tip">↻ Gira la tarjeta</span></div>
+        <div class="cara promo dorso"><h3>Cómo funciona</h3><p>Pide tu tarjeta en caja. Se sella en cada corte de RD$400 o más. Al completar 5 sellos, tu 6.º corte clásico es gratis.</p></div>
+      </div></div>
+      <div class="flip" tabindex="0" role="button" aria-label="Voltear: Trae a un amigo"><div class="flip-in">
+        <div class="cara promo"><span class="big">RD$100</span><h3>Trae a un amigo</h3><p>Tú y tu referido reciben RD$100 de descuento en su próximo corte.</p><span class="flip-tip">↻ Gira la tarjeta</span></div>
+        <div class="cara promo dorso"><h3>Cómo funciona</h3><p>Tu amigo dice tu nombre al reservar. Cuando venga por primera vez, los dos reciben RD$100 de descuento.</p></div>
+      </div></div>
+      <div class="flip" tabindex="0" role="button" aria-label="Voltear: Lunes de familia"><div class="flip-in">
+        <div class="cara promo"><span class="big">15%</span><h3>Lunes de familia</h3><p>Lunes y martes, 15 % en todos los Paquetes Family.</p><span class="flip-tip">↻ Gira la tarjeta</span></div>
+        <div class="cara promo dorso"><h3>Cómo usarla</h3><p>Aplica lunes y martes en Papá e hijo, Combo familiar y Hermanos o primos. Reserva en línea o por WhatsApp.</p></div>
+      </div></div>
     </div>
   </div>
 </section>
@@ -520,6 +584,7 @@ footer a:hover{color:var(--dorado)}
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1112 21.8zM20.5 3.5A11.8 11.8 0 001.7 17.7L0 24l6.4-1.7A11.8 11.8 0 0024 12c0-3.2-1.2-6.2-3.5-8.5z"/></svg>
 </a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const WA = "18094423390";
 const SERVICIOS = [
@@ -662,6 +727,146 @@ $("btn-sig").addEventListener("click", ()=>{
 });
 $("btn-otra").addEventListener("click", ()=>{ Object.assign(R,{paso:1,servicio:null,barbero:null,fecha:null,hora:null}); $("f-nombre").value=""; $("f-tel").value=""; render(); });
 render();
+
+// ===== 3D =====
+const SIN_MOV = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Poste de barbero 3D (Three.js)
+(function iniciarPoste(){
+  const cont = $("pole3d"), canvas = $("pole-canvas");
+  const sin3d = () => document.documentElement.classList.add("sin-3d");
+  if (!window.THREE || !cont) return sin3d();
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true}); } catch(e){ return sin3d(); }
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
+  camera.position.set(0, 0.15, 11);
+
+  // Entorno pintado a mano para que el cromo y el vidrio reflejen luz
+  const envC = document.createElement("canvas"); envC.width = 512; envC.height = 256;
+  const eg = envC.getContext("2d"), gr = eg.createLinearGradient(0,0,0,256);
+  gr.addColorStop(0,"#fff4dc"); gr.addColorStop(.42,"#9a8566"); gr.addColorStop(.55,"#2b2420"); gr.addColorStop(1,"#0c0c0c");
+  eg.fillStyle = gr; eg.fillRect(0,0,512,256);
+  eg.fillStyle = "#ffffff"; eg.fillRect(70,30,36,130); eg.fillRect(330,24,22,150);
+  eg.fillStyle = "#C8102E"; eg.fillRect(200,90,60,40);
+  const envTex = new THREE.CanvasTexture(envC);
+  envTex.mapping = THREE.EquirectangularReflectionMapping; envTex.encoding = THREE.sRGBEncoding;
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromEquirectangular(envTex).texture;
+
+  // Franjas diagonales rojo-blanco-azul que repiten sin cortes
+  const stC = document.createElement("canvas"); stC.width = stC.height = 512;
+  const sg = stC.getContext("2d"), P = 128, colores = ["#C8102E","#fbf8f2","#0A2F6B","#fbf8f2"];
+  sg.fillStyle = "#fbf8f2"; sg.fillRect(0,0,512,512);
+  for (let o = -512; o < 1024; o += P) colores.forEach((col,i)=>{
+    const a = o + i*P/4, b = a + P/4;
+    sg.fillStyle = col; sg.beginPath();
+    sg.moveTo(a,0); sg.lineTo(b,0); sg.lineTo(b-512,512); sg.lineTo(a-512,512); sg.closePath(); sg.fill();
+  });
+  const tex = new THREE.CanvasTexture(stC);
+  tex.wrapS = tex.wrapT = THREE.RepeatWrapping; tex.repeat.set(2, 1.73);
+  tex.encoding = THREE.sRGBEncoding; tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+
+  const H = 3, poste = new THREE.Group(), girador = new THREE.Group();
+  scene.add(poste); poste.add(girador);
+  const cromo = new THREE.MeshStandardMaterial({color:0xe6e6e6, metalness:1, roughness:.16});
+  const oro = new THREE.MeshStandardMaterial({color:0xC9A54C, metalness:1, roughness:.28});
+  const malla = (geo, mat, y, rx) => { const m = new THREE.Mesh(geo, mat); m.position.y = y; if (rx) m.rotation.x = rx; poste.add(m); return m; };
+
+  const franjas = new THREE.Mesh(new THREE.CylinderGeometry(.55,.55,H,64,1,true),
+    new THREE.MeshStandardMaterial({map:tex, roughness:.35, emissive:0xffffff, emissiveMap:tex, emissiveIntensity:.22}));
+  girador.add(franjas);
+  malla(new THREE.CylinderGeometry(.66,.66,H,64,1,true),
+    new THREE.MeshPhysicalMaterial({color:0xffffff, roughness:.04, metalness:0, clearcoat:1, transparent:true, opacity:.16, side:THREE.DoubleSide, depthWrite:false, envMapIntensity:2}), 0);
+  // Remate superior
+  malla(new THREE.TorusGeometry(.72,.05,16,64), oro, H/2+.02, Math.PI/2);
+  malla(new THREE.CylinderGeometry(.76,.76,.3,64), cromo, H/2+.17);
+  malla(new THREE.SphereGeometry(.64,48,24,0,Math.PI*2,0,Math.PI/2), cromo, H/2+.32);
+  malla(new THREE.SphereGeometry(.15,24,16), oro, H/2+1.02);
+  // Base
+  malla(new THREE.TorusGeometry(.72,.05,16,64), oro, -H/2-.02, Math.PI/2);
+  malla(new THREE.CylinderGeometry(.76,.76,.3,64), cromo, -H/2-.17);
+  malla(new THREE.CylinderGeometry(.76,.32,.5,64), cromo, -H/2-.57);
+  malla(new THREE.SphereGeometry(.17,24,16), oro, -H/2-.9);
+  poste.rotation.z = .07;
+
+  scene.add(new THREE.AmbientLight(0xffffff, .35));
+  const clave = new THREE.DirectionalLight(0xfff1d6, 1.6); clave.position.set(3,4,5); scene.add(clave);
+  const borde = new THREE.DirectionalLight(0x8fb0ff, 1.1); borde.position.set(-4,1,-3); scene.add(borde);
+  const calido = new THREE.PointLight(0xC8102E, 1.2, 8); calido.position.set(2,-1,2); scene.add(calido);
+
+  // Tamaño
+  const ajustar = () => {
+    const w = cont.clientWidth, h = cont.clientHeight; if (!w || !h) return;
+    renderer.setSize(w, h, false); camera.aspect = w/h;
+    camera.position.z = w/h < .55 ? 13 : 11;
+    camera.updateProjectionMatrix();
+  };
+  new ResizeObserver(ajustar).observe(cont); ajustar();
+
+  // Arrastrar para girar (con inercia) + inclinación con el puntero
+  let rotY = .5, vel = 0, arrastrando = false, ultX = 0, inclX = 0, inclMeta = 0;
+  cont.addEventListener("pointerdown", e => { arrastrando = true; ultX = e.clientX; vel = 0; cont.setPointerCapture(e.pointerId); });
+  cont.addEventListener("pointermove", e => { if (!arrastrando) return; const dx = e.clientX - ultX; ultX = e.clientX; vel = dx*.012; rotY += vel; });
+  ["pointerup","pointercancel"].forEach(ev => cont.addEventListener(ev, () => arrastrando = false));
+  addEventListener("pointermove", e => { if (e.pointerType === "mouse") inclMeta = (e.clientY/innerHeight - .5) * .25; });
+
+  // Solo anima cuando la portada está a la vista
+  let visible = true, t0 = performance.now();
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) { t0 = performance.now(); requestAnimationFrame(cuadro); } }).observe(cont);
+  function cuadro(t){
+    const dt = Math.min((t - t0)/1000, .05); t0 = t;
+    if (!SIN_MOV) franjas.rotation.y -= dt*1.6;         // las franjas "suben"
+    if (!arrastrando){ vel *= .94; rotY += vel + (SIN_MOV ? 0 : dt*.25); }
+    inclX += (inclMeta - inclX) * .05;
+    poste.rotation.y = rotY; poste.rotation.x = inclX;
+    poste.position.y = SIN_MOV ? 0 : Math.sin(t/1100)*.09;
+    renderer.render(scene, camera);
+    if (visible) requestAnimationFrame(cuadro);
+  }
+  requestAnimationFrame(cuadro);
+})();
+
+// Tarjetas de servicios y barberos que se inclinan siguiendo el cursor
+if (!SIN_MOV && matchMedia("(hover: hover) and (pointer: fine)").matches){
+  let actual = null;
+  const soltar = c => { c.classList.remove("moviendo"); c.style.transform = ""; };
+  document.addEventListener("pointermove", e => {
+    const card = e.target.closest(".serv, .barbero");
+    if (actual && actual !== card) soltar(actual);
+    actual = card; if (!card) return;
+    const r = card.getBoundingClientRect(), px = (e.clientX - r.left)/r.width, py = (e.clientY - r.top)/r.height;
+    card.classList.add("tilt", "moviendo");
+    card.style.transform = `perspective(900px) rotateX(${(.5-py)*12}deg) rotateY(${(px-.5)*14}deg) scale(1.02)`;
+    card.style.setProperty("--gx", px*100 + "%"); card.style.setProperty("--gy", py*100 + "%");
+  });
+  document.addEventListener("mouseout", e => { if (!e.relatedTarget && actual){ soltar(actual); actual = null; } });
+}
+
+// Promociones: se voltean al pasar el cursor; en el celular, al tocarlas
+document.querySelectorAll(".flip").forEach(f => {
+  if (!matchMedia("(hover: hover)").matches) f.addEventListener("click", () => f.classList.toggle("girada"));
+  f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ e.preventDefault(); f.classList.toggle("girada"); } });
+});
+
+// Secciones que entran con un giro 3D al bajar
+if (!SIN_MOV){
+  document.documentElement.classList.add("js-3d");
+  const pendientes = new Set(document.querySelectorAll(".sec-head, .serv-grid, .galeria, .barberos, .reserva-box, .rating-big, .resenas, .promos, .ubic"));
+  pendientes.forEach(el => el.classList.add("reveal"));
+  // Muestra todo lo que ya llegó a la pantalla (o que quedó arriba al saltar con el menú)
+  const revisar = () => {
+    pendientes.forEach(el => { if (el.getBoundingClientRect().top < innerHeight * .9){ el.classList.add("visible"); pendientes.delete(el); } });
+    if (!pendientes.size) removeEventListener("scroll", alMover);
+  };
+  let pedido = false;
+  const alMover = () => { if (!pedido){ pedido = true; requestAnimationFrame(() => { pedido = false; revisar(); }); } };
+  addEventListener("scroll", alMover, {passive:true}); addEventListener("resize", alMover); revisar();
+}
 </script>
 </body>
 </html>
