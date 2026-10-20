@@ -6,6 +6,17 @@
 <title>The Family Barber Shop II | Barbería en Villas Claudia, Santo Domingo</title>
 <meta name="description" content="Barbería familiar en Villas Claudia, Santo Domingo. Cortes, barba y paquetes para toda la familia. ⭐ 4.7 en Google. Reserva en línea o por WhatsApp.">
 <meta name="robots" content="noindex">
+<script>
+  // La demo siempre empieza arriba: sin restaurar el scroll anterior ni saltar a una #sección
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  let movidoPorUsuario = false;
+  ["wheel", "touchstart", "keydown"].forEach(ev => addEventListener(ev, () => movidoPorUsuario = true, {once:true, passive:true}));
+  const irAlInicio = () => { if (!movidoPorUsuario) scrollTo({top:0, left:0, behavior:"instant"}); };
+  addEventListener("DOMContentLoaded", irAlInicio);
+  addEventListener("load", irAlInicio);
+  addEventListener("pageshow", e => { if (e.persisted) scrollTo({top:0, left:0, behavior:"instant"}); });
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
@@ -878,6 +889,14 @@ if (!SIN_MOV && matchMedia("(hover: hover) and (pointer: fine)").matches){
 document.querySelectorAll(".flip").forEach(f => {
   if (!matchMedia("(hover: hover)").matches) f.addEventListener("click", () => f.classList.toggle("girada"));
   f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ e.preventDefault(); f.classList.toggle("girada"); } });
+});
+
+// Los enlaces del menú bajan a su sección sin agregar #sección a la dirección
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]'); if (!a) return;
+  const destino = document.getElementById(a.getAttribute("href").slice(1)); if (!destino) return;
+  e.preventDefault();
+  destino.scrollIntoView({behavior: SIN_MOV ? "auto" : "smooth"});
 });
 
 // Secciones que entran con un giro 3D al bajar
