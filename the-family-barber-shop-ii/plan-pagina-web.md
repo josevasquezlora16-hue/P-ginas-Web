@@ -1,4 +1,4 @@
-# The Family Barber Shop II — Plan de página web, marca y crecimiento
+# The Family Barber Shop — Plan de página web, marca y crecimiento
 
 > Barbería en C. Colibrí, Residencial Villas Claudia, Santo Domingo, República Dominicana
 > Plus Code: F2X8+QM Santo Domingo · Tel./WhatsApp: (809) 442-3390 · Google: ⭐ 4.7 (38 opiniones)
@@ -89,7 +89,7 @@ Página principal tipo "una sola página larga" (one-page) con menú que baja a 
 
 **Enlace directo de WhatsApp con mensaje prellenado:**
 ```
-https://wa.me/18094423390?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20The%20Family%20Barber%20Shop%20II
+https://wa.me/18094423390?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20The%20Family%20Barber%20Shop
 ```
 
 ---
@@ -127,7 +127,7 @@ https://wa.me/18094423390?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20T
 - Usa **respuestas rápidas** (escribe `/` + atajo):
 
 `/confirmar`
-> ¡Hola {nombre}! ✂️ Tu cita en **The Family Barber Shop II** está confirmada:
+> ¡Hola {nombre}! ✂️ Tu cita en **The Family Barber Shop** está confirmada:
 > 📅 {día} a las {hora} · 💈 {servicio} con {barbero}
 > 📍 C. Colibrí, Villas Claudia → https://maps.google.com/?q=F2X8%2BQM+Santo+Domingo
 > Si necesitas cambiarla, avísanos con 2 horas de anticipación. ¡Te esperamos, familia!
@@ -209,7 +209,7 @@ Reglas: 60 % base (negro o crema), 30 % azul/gris, 10 % rojo (solo para lo que s
 - *Por qué atrae:* transmite elegancia y tradición familiar, ideal si quieres subir el ticket promedio (paquete VIP, novios, eventos). Atrae a padres y adultos de 30–55 años.
 
 ### Logo y estilo general
-- **Logo:** escudo o sello circular con un poste de barbero o unas tijeras en el centro; arriba *THE FAMILY*, abajo *BARBER SHOP II*, y un detalle "Villas Claudia · SD". Versión horizontal para la web y versión cuadrada para el perfil de redes.
+- **Logo:** escudo o sello circular con un poste de barbero o unas tijeras en el centro; arriba *THE FAMILY*, abajo *BARBER SHOP*, y un detalle "Villas Claudia · SD". Versión horizontal para la web y versión cuadrada para el perfil de redes.
 - **Fotografía:** luz cálida, gente real (padres e hijos, abuelos, el barbero riendo con el cliente). Evita fotos de banco de imágenes.
 - **Elementos gráficos:** franjas diagonales rojo-blanco-azul como separadores, texturas suaves de papel o madera en fondo crema.
 - **Tono de voz:** cercano y dominicano sin exagerar: "¡Te esperamos, familia!", "Tu silla está lista", "Aquí el corte se hace con cariño".
@@ -287,11 +287,11 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 - barbería en Santo Domingo · barbería Villas Claudia · barbería cerca de mí · barbería para niños Santo Domingo · corte de pelo hombre Santo Domingo · fade Santo Domingo · barbería familiar
 
 **Dónde ponerlas (ejemplos listos):**
-- **Título de la página (title):** `The Family Barber Shop II | Barbería en Villas Claudia, Santo Domingo`
+- **Título de la página (title):** `The Family Barber Shop | Barbería en Villas Claudia, Santo Domingo`
 - **Meta descripción:** `Barbería familiar en Villas Claudia, Santo Domingo. Cortes, barba y paquetes para toda la familia. ⭐ 4.7 en Google. Reserva en línea o por WhatsApp.`
 - **H1:** `Barbería familiar en Villas Claudia, Santo Domingo`
 - **H2 de servicios:** `Cortes, barba y tratamientos para toda la familia`
-- **Nombres de imágenes y texto alternativo:** `fade-degradado-barberia-villas-claudia.jpg` → alt: "Corte degradado en The Family Barber Shop II, Villas Claudia"
+- **Nombres de imágenes y texto alternativo:** `fade-degradado-barberia-villas-claudia.jpg` → alt: "Corte degradado en The Family Barber Shop, Villas Claudia"
 - **Datos estructurados (schema.org):** tipo `HairSalon` (Google no tiene tipo "Barbería" en schema) con nombre, dirección, teléfono, horario y coordenadas. No marques tus propias reseñas para mostrar estrellas: Google no las muestra para negocios locales.
 - **NAP consistente:** mismo nombre, dirección y teléfono (exactamente igual) en web, Google, Facebook, Instagram, directorios (Páginas Amarillas RD, Apple Maps/Business Connect, Bing Places, Waze).
 - **Blog/guías sencillas (1 al mes):** "Mejores cortes para niños para el regreso a clases", "Cómo elegir corte según tu cara".
@@ -304,7 +304,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 - [ ] Botón de **"Reservar"** con el enlace de tu página de reservas; botón de mensaje/WhatsApp.
 - [ ] Servicios con precios cargados (los de la sección 0).
 - [ ] Atributos: "Acepta tarjetas de crédito", "Apto para niños", "Con cita previa", "Wi-Fi", etc.
-- [ ] Descripción (750 caracteres) con palabras clave: *"The Family Barber Shop II es una barbería familiar en Residencial Villas Claudia, Santo Domingo…"*
+- [ ] Descripción (750 caracteres) con palabras clave: *"The Family Barber Shop es una barbería familiar en Residencial Villas Claudia, Santo Domingo…"*
 - [ ] **Fotos:** fachada (para que la reconozcan al llegar), interior, equipo, 20+ cortes. Sube 3–5 fotos nuevas cada semana.
 - [ ] Publicaciones semanales (ofertas, eventos, novedades).
 - [ ] Preguntas y respuestas: publica y responde tú mismo las dudas frecuentes ("¿Atienden niños?", "¿Hay parqueo?", "¿Aceptan tarjeta?").
