@@ -1,7 +1,7 @@
-# The Family Barber Shop — Plan de página web, marca y crecimiento
+# The Family BarberShop — Plan de página web, marca y crecimiento
 
-> Barbería en C. Colibrí, Residencial Villas Claudia, Santo Domingo, República Dominicana
-> Plus Code: F2X8+QM Santo Domingo · Tel./WhatsApp: (809) 442-3390 · Google: ⭐ 4.7 (38 opiniones)
+> Barbero en Santo Domingo · Avenida República de Colombia, Santo Domingo, Distrito Nacional
+> Tel./WhatsApp: +1 (809) 372-5952 · Horario: abierto, cierra a las 9 p. m. (confirmar el horario completo)
 
 **Idea central de marca:** *"Aquí no eres cliente, eres familia."*
 Todo el sitio, las redes y las promociones giran alrededor de esa frase: cercanía, confianza y tradición, con una imagen moderna.
@@ -29,8 +29,7 @@ Todo el sitio, las redes y las promociones giran alrededor de esa frase: cercan�
 
 | Día | Horario | Nota |
 |---|---|---|
-| Lunes | 9:00 a.m. – 6:00 p.m. | Día flojo: ideal para promociones |
-| Martes a jueves | 9:00 a.m. – 8:00 p.m. | |
+| Lunes a jueves | 9:00 a.m. – 9:00 p.m. | Cierre a las 9 p. m. según Google; confirmar la hora de apertura. Lunes: ideal para promociones |
 | Viernes y sábado | 9:00 a.m. – 9:00 p.m. | Días de mayor demanda: solo con cita o lista de espera |
 | Domingo | 9:00 a.m. – 2:00 p.m. | Medio día, enfocado en familias |
 
@@ -72,8 +71,8 @@ Página principal tipo "una sola página larga" (one-page) con menú que baja a 
 
 | # | Sección | Objetivo | Contenido concreto |
 |---|---|---|---|
-| 1 | **Inicio (hero)** | Que en 3 segundos sepan qué eres, dónde estás y cómo reservar | Foto o video corto de un corte real. Título: *"Aquí no eres cliente, eres familia."* Subtítulo: *"Barbería en Villas Claudia, Santo Domingo · ⭐ 4.7 en Google"*. Botones: **Reserva tu cita** y **Escríbenos por WhatsApp** |
-| 2 | **Barra de confianza** | Generar confianza inmediata | ⭐ 4.7 / 38 reseñas en Google · "Abierto hoy hasta las 8 p.m." · "Pago con tarjeta, transferencia o efectivo" |
+| 1 | **Inicio (hero)** | Que en 3 segundos sepan qué eres, dónde estás y cómo reservar | Foto o video corto de un corte real. Título: *"Aquí no eres cliente, eres familia."* Subtítulo: *"Barbero en Santo Domingo · Av. República de Colombia · Abierto hasta las 9 p. m."*. Botones: **Reserva tu cita** y **Escríbenos por WhatsApp** |
+| 2 | **Barra de confianza** | Generar confianza inmediata | ⭐ Calificación y número de reseñas de Google · "Abierto · Cierra a las 9 p. m." · "Pago con tarjeta, transferencia o efectivo" |
 | 3 | **Servicios y precios** | Que el cliente elija sin preguntar | Tarjetas por servicio con precio, duración y botón "Reservar este servicio". Destacar *Corte + barba* como "Más pedido" y los *Paquetes Family* |
 | 4 | **Galería de cortes** | Mostrar calidad real | 9–12 fotos propias (antes/después, fades, diseños, niños). Debajo: feed de Instagram integrado y botón "Ver más en Instagram" |
 | 5 | **Nuestros barberos** | Crear conexión personal (esto genera clientes fijos) | Foto, nombre, especialidad ("rey del fade", "especialista en niños"), años de experiencia, su Instagram y botón "Reservar con [nombre]" |
@@ -89,7 +88,7 @@ Página principal tipo "una sola página larga" (one-page) con menú que baja a 
 
 **Enlace directo de WhatsApp con mensaje prellenado:**
 ```
-https://wa.me/18094423390?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20The%20Family%20Barber%20Shop
+https://wa.me/18093725952?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20The%20Family%20BarberShop
 ```
 
 ---
@@ -127,9 +126,9 @@ https://wa.me/18094423390?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20T
 - Usa **respuestas rápidas** (escribe `/` + atajo):
 
 `/confirmar`
-> ¡Hola {nombre}! ✂️ Tu cita en **The Family Barber Shop** está confirmada:
+> ¡Hola {nombre}! ✂️ Tu cita en **The Family BarberShop** está confirmada:
 > 📅 {día} a las {hora} · 💈 {servicio} con {barbero}
-> 📍 C. Colibrí, Villas Claudia → https://maps.google.com/?q=F2X8%2BQM+Santo+Domingo
+> 📍 Av. República de Colombia → https://maps.google.com/?q=The+Family+BarberShop+Avenida+Rep%C3%BAblica+de+Colombia+Santo+Domingo
 > Si necesitas cambiarla, avísanos con 2 horas de anticipación. ¡Te esperamos, familia!
 
 `/recordatorio` (se envía el día anterior)
@@ -209,7 +208,7 @@ Reglas: 60 % base (negro o crema), 30 % azul/gris, 10 % rojo (solo para lo que s
 - *Por qué atrae:* transmite elegancia y tradición familiar, ideal si quieres subir el ticket promedio (paquete VIP, novios, eventos). Atrae a padres y adultos de 30–55 años.
 
 ### Logo y estilo general
-- **Logo:** escudo o sello circular con un poste de barbero o unas tijeras en el centro; arriba *THE FAMILY*, abajo *BARBER SHOP*, y un detalle "Villas Claudia · SD". Versión horizontal para la web y versión cuadrada para el perfil de redes.
+- **Logo:** escudo o sello circular con un poste de barbero o unas tijeras en el centro; arriba *THE FAMILY*, abajo *BARBERSHOP*, y un detalle "Av. República de Colombia · SD". Versión horizontal para la web y versión cuadrada para el perfil de redes.
 - **Fotografía:** luz cálida, gente real (padres e hijos, abuelos, el barbero riendo con el cliente). Evita fotos de banco de imágenes.
 - **Elementos gráficos:** franjas diagonales rojo-blanco-azul como separadores, texturas suaves de papel o madera en fondo crema.
 - **Tono de voz:** cercano y dominicano sin exagerar: "¡Te esperamos, familia!", "Tu silla está lista", "Aquí el corte se hace con cariño".
@@ -242,7 +241,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 |---|---|---|
 | Instagram | 4 Reels + 1 carrusel por semana; historias **todos los días** (agenda del día, turnos libres) | Galería y reservas |
 | TikTok | 4–5 videos por semana (se pueden reutilizar los Reels sin marca de agua) | Alcance a gente nueva |
-| Facebook | 3 publicaciones por semana (comparte los Reels) + publica en grupos de la comunidad (Villas Claudia, Santo Domingo Este/Norte, etc.) | Público adulto y padres |
+| Facebook | 3 publicaciones por semana (comparte los Reels) + publica en grupos de la comunidad (vecinos de la Av. República de Colombia, Distrito Nacional, etc.) | Público adulto y padres |
 | WhatsApp Business | Estado diario + lista de difusión 1 vez por semana (máximo) | Clientes fijos |
 | Google Business Profile | 1 publicación semanal + fotos nuevas cada semana | SEO local |
 
@@ -252,18 +251,18 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 > Truco práctico: graba todo el sábado (día lleno) y edita con CapCut para tener contenido de toda la semana.
 
 ### Conectar redes con la web
-- **Bio de Instagram/TikTok:** "💈 Barbería familiar en Villas Claudia, SD · ⭐ 4.7 en Google · 📅 Reserva aquí 👇" + enlace directo a la página de reservas (no a la portada).
+- **Bio de Instagram/TikTok:** "💈 Barbería familiar · Av. República de Colombia, SD · 📅 Reserva aquí 👇" + enlace directo a la página de reservas (no a la portada).
 - Activa el botón **"Reservar"** de Instagram y Facebook (botón de acción) apuntando a tu página de reservas o a WhatsApp.
 - **Feed de Instagram integrado** en la web (plugin *Smash Balloon* en WordPress, o widget de *Elfsight/Behold*).
-- Cada video termina con la misma frase: *"Reserva por el link de la bio o escríbenos al 809-442-3390."*
+- Cada video termina con la misma frase: *"Reserva por el link de la bio o escríbenos al 809-372-5952."*
 - Usa enlaces con etiquetas UTM (ej.: `?utm_source=instagram`) para saber de qué red llegan las reservas.
 
 ### Convertir reseñas de Google en contenido
 1. Elige una reseña de 5 estrellas por semana.
 2. Diséñala en Canva: fondo crema, estrellas doradas, texto de la reseña, nombre del cliente con inicial ("— Juan P.") y foto de su corte si la tienes.
 3. Publícala como post + historia con el texto: *"Esto es lo que dice la familia ❤️ ¿Ya nos dejaste tu reseña?"* + enlace.
-4. Responde **todas** las reseñas en Google en menos de 48 horas, usando el nombre del cliente y la palabra clave: *"¡Gracias, Juan! Siempre es un placer atenderte en nuestra barbería de Villas Claudia. ¡Te esperamos, familia!"*
-5. Meta: pasar de 38 a **100 reseñas** en 6 meses con el mensaje `/gracias` y un código QR en el espejo.
+4. Responde **todas** las reseñas en Google en menos de 48 horas, usando el nombre del cliente y la palabra clave: *"¡Gracias, Juan! Siempre es un placer atenderte en nuestra barbería de la Av. República de Colombia. ¡Te esperamos, familia!"*
+5. Meta: llegar a **100 reseñas** en 6 meses con el mensaje `/gracias` y un código QR en el espejo.
 
 ---
 
@@ -284,14 +283,14 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 ### SEO local
 
 **Palabras clave principales:**
-- barbería en Santo Domingo · barbería Villas Claudia · barbería cerca de mí · barbería para niños Santo Domingo · corte de pelo hombre Santo Domingo · fade Santo Domingo · barbería familiar
+- barbería en Santo Domingo · barbería Avenida República de Colombia · barbero Distrito Nacional · barbería cerca de mí · barbería para niños Santo Domingo · corte de pelo hombre Santo Domingo · fade Santo Domingo · barbería familiar
 
 **Dónde ponerlas (ejemplos listos):**
-- **Título de la página (title):** `The Family Barber Shop | Barbería en Villas Claudia, Santo Domingo`
-- **Meta descripción:** `Barbería familiar en Villas Claudia, Santo Domingo. Cortes, barba y paquetes para toda la familia. ⭐ 4.7 en Google. Reserva en línea o por WhatsApp.`
-- **H1:** `Barbería familiar en Villas Claudia, Santo Domingo`
+- **Título de la página (title):** `The Family BarberShop | Barbero en Santo Domingo, Av. República de Colombia`
+- **Meta descripción:** `Barbería familiar en la Avenida República de Colombia, Santo Domingo. Cortes, barba y paquetes para toda la familia. Abierto hasta las 9 p. m. Reserva en línea o por WhatsApp.`
+- **H1:** `Barbería familiar en la Avenida República de Colombia, Santo Domingo`
 - **H2 de servicios:** `Cortes, barba y tratamientos para toda la familia`
-- **Nombres de imágenes y texto alternativo:** `fade-degradado-barberia-villas-claudia.jpg` → alt: "Corte degradado en The Family Barber Shop, Villas Claudia"
+- **Nombres de imágenes y texto alternativo:** `fade-degradado-barberia-republica-de-colombia.jpg` → alt: "Corte degradado en The Family BarberShop, Av. República de Colombia"
 - **Datos estructurados (schema.org):** tipo `HairSalon` (Google no tiene tipo "Barbería" en schema) con nombre, dirección, teléfono, horario y coordenadas. No marques tus propias reseñas para mostrar estrellas: Google no las muestra para negocios locales.
 - **NAP consistente:** mismo nombre, dirección y teléfono (exactamente igual) en web, Google, Facebook, Instagram, directorios (Páginas Amarillas RD, Apple Maps/Business Connect, Bing Places, Waze).
 - **Blog/guías sencillas (1 al mes):** "Mejores cortes para niños para el regreso a clases", "Cómo elegir corte según tu cara".
@@ -304,7 +303,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 - [ ] Botón de **"Reservar"** con el enlace de tu página de reservas; botón de mensaje/WhatsApp.
 - [ ] Servicios con precios cargados (los de la sección 0).
 - [ ] Atributos: "Acepta tarjetas de crédito", "Apto para niños", "Con cita previa", "Wi-Fi", etc.
-- [ ] Descripción (750 caracteres) con palabras clave: *"The Family Barber Shop es una barbería familiar en Residencial Villas Claudia, Santo Domingo…"*
+- [ ] Descripción (750 caracteres) con palabras clave: *"The Family BarberShop es una barbería familiar en la Avenida República de Colombia, Santo Domingo…"*
 - [ ] **Fotos:** fachada (para que la reconozcan al llegar), interior, equipo, 20+ cortes. Sube 3–5 fotos nuevas cada semana.
 - [ ] Publicaciones semanales (ofertas, eventos, novedades).
 - [ ] Preguntas y respuestas: publica y responde tú mismo las dudas frecuentes ("¿Atienden niños?", "¿Hay parqueo?", "¿Aceptan tarjeta?").
@@ -314,7 +313,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 ### Llamados a la acción en toda la web
 - Botón fijo en el celular: **📅 Reservar** + **💬 WhatsApp**.
 - Después de cada sección, un CTA distinto: Servicios → "Reservar este servicio"; Galería → "Quiero este corte"; Barberos → "Reservar con Carlos"; Reseñas → "Únete a la familia"; Mapa → "Cómo llegar".
-- Prueba social junto a los botones: "⭐ 4.7 · 38 reseñas en Google".
+- Prueba social junto a los botones: "⭐ [calificación] · [número] reseñas en Google" (con los datos reales del perfil).
 - Urgencia real (no inventada): "Sábado casi lleno — quedan 4 turnos".
 
 ### Métricas a revisar cada mes
