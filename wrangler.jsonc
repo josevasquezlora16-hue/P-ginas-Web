@@ -1,0 +1,8 @@
+// Configuración para publicar la demo de Express Barber en Cloudflare (Workers con archivos estáticos)
+{
+  "name": "express-barber-demo",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./the-family-barber-shop-ii/demo"
+  }
+}
