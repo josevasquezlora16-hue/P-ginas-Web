@@ -2,6 +2,10 @@
 
 Repositorio de páginas web de demostración para negocios locales en República Dominicana. El usuario escribe en español; responde siempre en español, con lenguaje sencillo.
 
+## Forma de trabajar (pedida por el usuario)
+
+Cuando el usuario pida un cambio en la demo, hazlo de principio a fin **sin pedir confirmación**: edita, prueba (ver "Cómo probar"), haz commit, haz push a `claude/upbeat-fermat-ejl14h` y publícalo. Al final, avísale qué cambió y pásale el enlace. Pregunta solo si el pedido es ambiguo o si falta un dato del negocio que no se puede inventar.
+
 ## Demo de Express Barber (proyecto principal)
 
 - **Carpeta:** `the-family-barber-shop-ii/demo/` (el nombre de la carpeta es histórico: empezó como "The Family Barber Shop II" y se convirtió en Express Barber).
