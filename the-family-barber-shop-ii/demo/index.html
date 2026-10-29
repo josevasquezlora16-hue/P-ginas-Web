@@ -259,19 +259,19 @@ footer a:hover{color:var(--dorado)}
 /* Entrada: las puertas de la barbería se abren */
 .puertas{display:none}
 html.bloqueo{overflow:hidden}
-html.con-puertas .puertas{display:block;position:fixed;inset:0;z-index:100;perspective:1700px;perspective-origin:50% 42%;cursor:pointer;transition:opacity .8s ease}
+html.con-puertas .puertas{display:block;position:fixed;inset:0;z-index:100;perspective:1700px;perspective-origin:50% 42%;cursor:pointer;transition:opacity 1s ease}
 .puertas.fuera{opacity:0;pointer-events:none}
-.puertas-marco{position:absolute;inset:0;display:flex;transform-style:preserve-3d;animation:aparecer .9s ease both;transition:transform 2.2s cubic-bezier(.55,.05,.25,1)}
-.puertas.abiertas .puertas-marco{transform:scale(1.2)}
+.puertas-marco{position:absolute;inset:0;display:flex;transform-style:preserve-3d;animation:aparecer .9s ease both;transition:transform 3s cubic-bezier(.45,.05,.25,1)}
+.puertas.abiertas .puertas-marco{transform:scale(1.15)}
 .puerta{position:relative;width:50%;height:100%;transform-style:preserve-3d;
   background:linear-gradient(115deg,rgba(255,255,255,.07),rgba(255,255,255,0) 28%,rgba(255,255,255,.035) 52%,rgba(255,255,255,0) 62%),repeating-linear-gradient(90deg,#0a0a0a 0 3px,#0f0f0f 3px 6px);
-  transition:transform 1.8s cubic-bezier(.65,.02,.25,1)}
+  transition:transform 2.4s cubic-bezier(.6,.02,.3,1)}
 .puerta.izq{transform-origin:left center;box-shadow:inset -1px 0 0 rgba(201,165,76,.6)}
 .puerta.der{transform-origin:right center;box-shadow:inset 1px 0 0 rgba(201,165,76,.6)}
 .puertas.abiertas .puerta.izq{transform:rotateY(-108deg)}
 .puertas.abiertas .puerta.der{transform:rotateY(108deg)}
 .puerta::before{content:"";position:absolute;inset:7vh clamp(14px,4vw,56px);border:1px solid rgba(201,165,76,.55);outline:1px solid rgba(200,16,46,.3);outline-offset:7px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01) 40%,rgba(255,255,255,.05) 70%,rgba(255,255,255,0))}
-.puerta::after{content:"";position:absolute;inset:0;background:#000;opacity:0;transition:opacity 1.8s ease}
+.puerta::after{content:"";position:absolute;inset:0;background:#000;opacity:0;transition:opacity 2.4s ease}
 .puertas.abiertas .puerta::after{opacity:.7}
 .manija{position:absolute;top:70%;width:7px;height:min(22vh,190px);transform:translateY(-50%);border-radius:4px;overflow:hidden;background:linear-gradient(90deg,#4d4d4d,#f2f2f2 40%,#8a8a8a 62%,#d6d6d6);box-shadow:0 0 14px rgba(0,0,0,.7)}
 .izq .manija{right:clamp(16px,2.6vw,36px)}
@@ -295,7 +295,7 @@ html.con-puertas .puertas{display:block;position:fixed;inset:0;z-index:100;persp
 .puertas.abiertas .puertas-luz{opacity:1}
 .puertas.fuera .puertas-luz{opacity:0;transition-delay:0s}
 .puertas-saltar{position:absolute;top:16px;right:16px;z-index:4;background:rgba(0,0,0,.5);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.5rem 1rem;font:600 .85rem Inter,sans-serif;cursor:pointer}
-html.entrando .hero{animation:entrarSitio 2s cubic-bezier(.2,.8,.2,1)}
+html.entrando .hero{animation:entrarSitio 2.6s cubic-bezier(.2,.8,.2,1)}
 @keyframes aparecer{from{opacity:0}to{opacity:1}}
 @keyframes desaparecer{from{opacity:1}to{opacity:0}}
 @keyframes aparecerLogo{from{opacity:0;transform:translateY(-50%) scale(.85)}to{opacity:1;transform:translateY(-50%)}}
@@ -393,8 +393,8 @@ main{overflow-x:clip}
   const abrir = () => {
     if (abiertas) return; abiertas = true;
     p.classList.add("abiertas"); raiz.classList.add("entrando");
-    setTimeout(() => { p.classList.add("fuera"); raiz.classList.remove("bloqueo"); }, 1500);
-    setTimeout(() => { p.remove(); raiz.classList.remove("con-puertas"); }, 2400);
+    setTimeout(() => { p.classList.add("fuera"); raiz.classList.remove("bloqueo"); }, 2000);
+    setTimeout(() => { p.remove(); raiz.classList.remove("con-puertas"); }, 3100);
   };
   addEventListener("DOMContentLoaded", () => setTimeout(abrir, 1500));
   p.addEventListener("click", abrir);
