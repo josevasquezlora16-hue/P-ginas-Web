@@ -9,9 +9,6 @@
 <script>
   // La demo siempre empieza arriba: sin restaurar el scroll anterior ni saltar a una #sección
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  // El video de entrada bloquea el scroll hasta que se cierra (no se muestra con "reducir movimiento")
-  document.documentElement.classList.add("js");
-  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("bloqueo");
   if (location.hash) history.replaceState(null, "", location.pathname + location.search);
   let movidoPorUsuario = false;
   ["wheel", "touchstart", "keydown"].forEach(ev => addEventListener(ev, () => movidoPorUsuario = true, {once:true, passive:true}));
@@ -256,28 +253,6 @@ footer a:hover{color:var(--dorado)}
 /* Letras en relieve */
 .hero h1 .script{text-shadow:1px 1px 0 #a5842f,2px 2px 0 #8f7128,3px 3px 0 #7a5f22,4px 4px 0 #644e1c,6px 9px 16px rgba(0,0,0,.55)}
 
-/* Video de entrada (pantalla de bienvenida) */
-.intro{display:none}
-.js .intro{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-items:center;overflow:hidden;transition:opacity .7s ease,transform .7s ease}
-.intro.cerrando{opacity:0;transform:scale(1.06);pointer-events:none}
-.js .intro.oculto{display:none}
-html.bloqueo{overflow:hidden}
-@media (prefers-reduced-motion:reduce){.js .intro{display:none}}
-.intro-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.intro-capa{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.3),rgba(0,0,0,.88))}
-.intro-contenido{position:relative;text-align:center;color:#fff;padding:0 16px}
-.intro-logo{width:clamp(110px,22vw,160px);aspect-ratio:1;border-radius:50%;object-fit:cover;margin:0 auto 18px;box-shadow:0 0 0 3px var(--rojo),0 20px 50px rgba(0,0,0,.6);opacity:0;animation:introLogo 1s cubic-bezier(.2,.8,.2,1) .3s forwards}
-.intro-nombre{font-family:Inter,sans-serif;font-weight:800;color:#fff;font-size:clamp(2.3rem,9vw,5.5rem);letter-spacing:.08em;line-height:1;opacity:0;animation:introSube .8s ease .9s forwards}
-.intro-nombre span{color:var(--rojo)}
-.intro-lema{font-family:"Alfa Slab One",serif;font-size:clamp(1.15rem,3.6vw,1.9rem);margin-top:14px;opacity:0;animation:introSube .8s ease 1.4s forwards}
-.intro-sub{letter-spacing:.35em;text-transform:uppercase;font-size:.78rem;margin-top:10px;opacity:0;animation:introSube .8s ease 1.8s forwards}
-.intro-entrar{margin-top:28px;opacity:0;animation:introSube .8s ease 2.3s forwards}
-.intro-saltar{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.5);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:.5rem 1rem;font:600 .85rem Inter,sans-serif;cursor:pointer}
-.intro-barra{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.15)}
-.intro-barra span{display:block;height:100%;width:0;background:var(--rojo);transition:width .25s linear}
-@keyframes introLogo{from{opacity:0;transform:scale(.6) rotate(-12deg)}to{opacity:1;transform:none}}
-@keyframes introSube{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-
 /* Servicio a domicilio */
 .domicilio{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px;background:var(--negro);color:#d8d2c6;border-radius:var(--radio);padding:22px 24px}
 .domicilio b{color:#fff;font-size:1.1rem}
@@ -339,45 +314,6 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
-
-<!-- VIDEO DE ENTRADA -->
-<div class="intro" id="intro" role="dialog" aria-label="Bienvenida a Express Barber">
-  <video class="intro-video" id="intro-video" muted playsinline preload="auto" poster="media/entrada-poster.jpg">
-    <source src="media/entrada.mp4" type="video/mp4">
-    <source src="media/entrada.webm" type="video/webm">
-  </video>
-  <div class="intro-capa"></div>
-  <div class="intro-contenido">
-    <img class="intro-logo" src="media/ig/logo.jpg" alt="Logo de Express Barber">
-    <h2 class="intro-nombre">EXPRESS <span>BARBER</span></h2>
-    <p class="intro-lema">Un corte hace la diferencia</p>
-    <p class="intro-sub">Estilo · Precisión · Actitud</p>
-    <button class="btn btn-rojo intro-entrar" id="intro-entrar" type="button">Entrar →</button>
-  </div>
-  <button class="intro-saltar" id="intro-saltar" type="button">Saltar ✕</button>
-  <div class="intro-barra"><span id="intro-progreso"></span></div>
-</div>
-<script>
-// Se cierra al terminar el video, con "Entrar", "Saltar" o Esc
-(function(){
-  const intro = document.getElementById("intro");
-  if (getComputedStyle(intro).display === "none") return;
-  const v = document.getElementById("intro-video"), barra = document.getElementById("intro-progreso");
-  let cerrado = false;
-  const cerrar = () => {
-    if (cerrado) return; cerrado = true;
-    intro.classList.add("cerrando"); document.documentElement.classList.remove("bloqueo");
-    setTimeout(() => { intro.classList.add("oculto"); v.pause(); }, 750);
-  };
-  v.play().catch(() => {});  // si el navegador no deja reproducir, queda la imagen y el botón Entrar
-  v.addEventListener("timeupdate", () => { if (v.duration) barra.style.width = (v.currentTime / v.duration * 100) + "%"; });
-  v.addEventListener("ended", () => setTimeout(cerrar, 900));
-  document.getElementById("intro-entrar").addEventListener("click", cerrar);
-  document.getElementById("intro-saltar").addEventListener("click", cerrar);
-  addEventListener("keydown", e => { if (e.key === "Escape") cerrar(); });
-  setTimeout(cerrar, 12000);  // por si el video no llega a cargar
-})();
-</script>
 
 <div class="demo-bar">DEMO de presentación · Fotos del Instagram de Express Barber · Los barberos son de ejemplo</div>
 
