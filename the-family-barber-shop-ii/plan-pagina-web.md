@@ -1,10 +1,11 @@
-# The Family BarberShop — Plan de página web, marca y crecimiento
+# Express Barber — Plan de página web, marca y crecimiento
 
-> Barbero en Santo Domingo · Avenida República de Colombia, Santo Domingo, Distrito Nacional
-> Tel./WhatsApp: +1 (809) 372-5952 · Horario: abierto, cierra a las 9 p. m. (confirmar el horario completo)
+> Barbería · Plaza Central, primer nivel, frente a Óptica López (dentro de Hollywood), Piantini, Santo Domingo
+> Tel./WhatsApp: (809) 229-8089 · Instagram: [@express_barber01](https://www.instagram.com/express_barber01/) · Reservas: atom.bio/expressbarber
+> Horario: lunes a sábado de 9:00 a.m. a 8:00 p.m. · domingo de 10:00 a.m. a 8:00 p.m. · Servicio a domicilio en zonas premium
 
-**Idea central de marca:** *"Aquí no eres cliente, eres familia."*
-Todo el sitio, las redes y las promociones giran alrededor de esa frase: cercanía, confianza y tradición, con una imagen moderna.
+**Idea central de marca:** *"Un corte hace la diferencia."* (el lema de su Instagram) · **Estilo · Precisión · Actitud**
+Todo el sitio, las redes y las promociones giran alrededor de esa idea: cortes fade limpios y modernos, experiencia premium y comodidad, con servicio a domicilio. Colores de la marca: negro, rojo y blanco, con la corona del logo.
 
 ---
 
@@ -25,41 +26,31 @@ Todo el sitio, las redes y las promociones giran alrededor de esa frase: cercan�
 
 ## 0. Datos base: horario y servicios con precios
 
-### Horario propuesto (confírmalo con el dueño y actualízalo igual en Google, web y redes)
+### Horario
 
-| Día | Horario | Nota |
-|---|---|---|
-| Lunes a jueves | 9:00 a.m. – 9:00 p.m. | Cierre a las 9 p. m. según Google; confirmar la hora de apertura. Lunes: ideal para promociones |
-| Viernes y sábado | 9:00 a.m. – 9:00 p.m. | Días de mayor demanda: solo con cita o lista de espera |
-| Domingo | 9:00 a.m. – 2:00 p.m. | Medio día, enfocado en familias |
+| Día | Horario |
+|---|---|
+| Lunes a sábado | 9:00 a.m. – 8:00 p.m. |
+| Domingo | 10:00 a.m. – 8:00 p.m. |
 
 > Regla de oro: el horario debe ser **idéntico** en Google Business Profile, la web, Instagram, Facebook y WhatsApp Business. Si cambia en feriados (Semana Santa, Navidad, 27 de febrero), actualízalo en Google con "horario especial".
 
-### Servicios y precios sugeridos (RD$, Santo Domingo, barbería de zona residencial)
+### Servicios y precios (lista actual de Express Barber)
 
-| Servicio | Duración | Precio sugerido |
-|---|---|---|
-| Corte clásico / degradado (fade) | 30–40 min | RD$ 400 – 600 |
-| Corte niño (hasta 12 años) | 25–30 min | RD$ 300 – 450 |
-| Arreglo de barba (perfilado + navaja) | 20 min | RD$ 200 – 350 |
-| **Corte + barba** (el más vendido) | 45–60 min | RD$ 600 – 850 |
-| Afeitado clásico con toalla caliente | 30 min | RD$ 350 – 500 |
-| Cejas (perfilado con navaja) | 10 min | RD$ 100 – 200 |
-| Diseño / rayitas / freestyle | +10–15 min | RD$ 100 – 250 |
-| Tinte de barba o canas | 30 min | RD$ 400 – 700 |
-| Mascarilla negra / limpieza facial | 20–30 min | RD$ 400 – 800 |
-| Tratamiento capilar (hidratación, anticaspa) | 30–45 min | RD$ 600 – 1,200 |
-| Corte VIP (corte + barba + cejas + mascarilla + bebida) | 75–90 min | RD$ 1,200 – 1,600 |
+| Servicio | Precio |
+|---|---|
+| Corte de pelo adulto | RD$ 600 |
+| **Corte de pelo y barba** (el más vendido) | RD$ 800 |
+| Corte de pelo infantil | RD$ 500 |
+| Barba | RD$ 350 |
+| Tintado de barba | RD$ 500 |
+| Facial | RD$ 500 |
+| Mantenimiento | RD$ 500 |
+| Lavado | RD$ 300 |
 
-**Paquetes "Family"** (lo que te diferencia de cualquier otra barbería):
+**Promociones vigentes (de su Instagram):** cortes a RD$600 de lunes a jueves · **Experiencia premium a domicilio** en Piantini, Naco, Bella Vista, Serrallés, Evaristo Morales, Los Cacicazgos, Julieta Morales y Arroyo Hondo Viejo (con cita).
 
-| Paquete | Incluye | Precio sugerido |
-|---|---|---|
-| Papá e hijo | 1 corte adulto + 1 corte niño | RD$ 750 – 950 |
-| Combo familiar | 3 cortes (cualquier edad) | RD$ 1,200 – 1,500 |
-| Hermanos / primos | 2 cortes adultos el mismo día | RD$ 800 – 1,000 |
-| Membresía mensual | 4 cortes al mes (1 por semana) | RD$ 1,500 – 2,000 |
-| Novio / evento | Corte + barba + facial + cejas, cita prioritaria | RD$ 1,500 – 2,500 |
+**Paquetes opcionales** (idea para subir el ticket promedio, no están en su lista actual): padre e hijo, dos hermanos el mismo día, o una membresía mensual de 4 cortes.
 
 > Ajusta los precios comparando con 3–4 barberías cercanas. Consulta con tu contador si los precios deben mostrarse con ITBIS incluido.
 
@@ -71,9 +62,9 @@ Página principal tipo "una sola página larga" (one-page) con menú que baja a 
 
 | # | Sección | Objetivo | Contenido concreto |
 |---|---|---|---|
-| 1 | **Inicio (hero)** | Que en 3 segundos sepan qué eres, dónde estás y cómo reservar | Foto o video corto de un corte real. Título: *"Aquí no eres cliente, eres familia."* Subtítulo: *"Barbero en Santo Domingo · Av. República de Colombia · Abierto hasta las 9 p. m."*. Botones: **Reserva tu cita** y **Escríbenos por WhatsApp** |
+| 1 | **Inicio (hero)** | Que en 3 segundos sepan qué eres, dónde estás y cómo reservar | Foto o video corto de un corte real. Título: *"Un corte hace la diferencia."* Subtítulo: *"Barbería en Plaza Central, Piantini · Abierto hasta las 8 p. m."*. Botones: **Reserva tu cita** y **Escríbenos por WhatsApp** |
 | 2 | **Barra de confianza** | Generar confianza inmediata | ⭐ Calificación y número de reseñas de Google · "Abierto · Cierra a las 9 p. m." · "Pago con tarjeta, transferencia o efectivo" |
-| 3 | **Servicios y precios** | Que el cliente elija sin preguntar | Tarjetas por servicio con precio, duración y botón "Reservar este servicio". Destacar *Corte + barba* como "Más pedido" y los *Paquetes Family* |
+| 3 | **Servicios y precios** | Que el cliente elija sin preguntar | Tarjetas por servicio con precio, duración y botón "Reservar este servicio". Destacar *Corte de pelo y barba* como "Más pedido" y el *servicio a domicilio* |
 | 4 | **Galería de cortes** | Mostrar calidad real | 9–12 fotos propias (antes/después, fades, diseños, niños). Debajo: feed de Instagram integrado y botón "Ver más en Instagram" |
 | 5 | **Nuestros barberos** | Crear conexión personal (esto genera clientes fijos) | Foto, nombre, especialidad ("rey del fade", "especialista en niños"), años de experiencia, su Instagram y botón "Reservar con [nombre]" |
 | 6 | **Reservas** | Convertir visitas en citas | Calendario integrado (ver sección 2). Texto: *"Reserva en menos de 1 minuto. Recibe confirmación por WhatsApp."* |
@@ -84,11 +75,11 @@ Página principal tipo "una sola página larga" (one-page) con menú que baja a 
 | 11 | **Pie de página** | SEO y confianza | Nombre, dirección y teléfono exactamente igual que en Google; enlaces a políticas de reserva y cancelación |
 
 **Textos de llamados a la acción (CTA) listos para usar:**
-- "Reserva tu cita" · "Aparta tu silla" · "Escríbenos por WhatsApp" · "Ven con tu familia" · "Cómo llegar"
+- "Reserva tu cita" · "Aparta tu silla" · "Escríbenos por WhatsApp" · "Pídelo a domicilio" · "Cómo llegar"
 
 **Enlace directo de WhatsApp con mensaje prellenado:**
 ```
-https://wa.me/18093725952?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20The%20Family%20BarberShop
+https://wa.me/18092298089?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20Express%20Barber
 ```
 
 ---
@@ -97,7 +88,7 @@ https://wa.me/18093725952?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20T
 
 ### Flujo en menos de 1 minuto (5 toques)
 
-1. **Servicio** → tarjetas grandes con precio y duración (Corte, Corte + barba, Niño, Paquete familiar…).
+1. **Servicio** → tarjetas grandes con precio y duración (Corte, Corte y barba, Infantil, Barba, Facial…).
 2. **Barbero** → fotos de los barberos + opción "Cualquiera disponible" (la más rápida).
 3. **Fecha** → calendario que solo muestra días con espacio.
 4. **Hora** → botones de horas libres (ej.: 10:00, 10:45, 11:30).
@@ -126,10 +117,10 @@ https://wa.me/18093725952?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20T
 - Usa **respuestas rápidas** (escribe `/` + atajo):
 
 `/confirmar`
-> ¡Hola {nombre}! ✂️ Tu cita en **The Family BarberShop** está confirmada:
+> ¡Hola {nombre}! ✂️ Tu cita en **Express Barber** está confirmada:
 > 📅 {día} a las {hora} · 💈 {servicio} con {barbero}
-> 📍 Av. República de Colombia → https://maps.google.com/?q=The+Family+BarberShop+Avenida+Rep%C3%BAblica+de+Colombia+Santo+Domingo
-> Si necesitas cambiarla, avísanos con 2 horas de anticipación. ¡Te esperamos, familia!
+> 📍 Plaza Central, primer nivel, frente a Óptica López → https://maps.google.com/?q=Plaza+Central+Piantini+Santo+Domingo
+> Si necesitas cambiarla, avísanos con 2 horas de anticipación. ¡Te esperamos!
 
 `/recordatorio` (se envía el día anterior)
 > ¡Hola {nombre}! 👋 Te recordamos tu cita **mañana a las {hora}** con {barbero}. Responde **1** para confirmar o **2** para cambiar la hora.
@@ -144,7 +135,7 @@ https://wa.me/18093725952?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20T
 
 ### Políticas de reserva (publícalas en la web)
 - Tolerancia de **10 minutos**; después, la cita puede reprogramarse.
-- Cancelación gratis hasta **2 horas antes**; si no, el depósito queda como crédito para la próxima visita (no se pierde: eso mantiene el ambiente "familia").
+- Cancelación gratis hasta **2 horas antes**; si no, el depósito queda como crédito para la próxima visita (no se pierde: eso mantiene la buena relación con el cliente).
 - Clientes sin cita: se atienden según disponibilidad.
 
 ---
@@ -163,7 +154,7 @@ https://wa.me/18093725952?text=Hola%2C%20quiero%20reservar%20un%20corte%20en%20T
 
 ### Cómo funciona el depósito
 - **Monto:** RD$ 200 (o 30–50 % del servicio). Se **descuenta del total** el día del corte.
-- **Cuándo pedirlo:** obligatorio para viernes y sábado, para paquetes familiares, para Corte VIP y novios; opcional el resto de la semana.
+- **Cuándo pedirlo:** obligatorio para viernes y sábado, para el servicio a domicilio; opcional el resto de la semana.
 - **Flujo:** reserva → pago del depósito (tarjeta en línea o transferencia) → confirmación automática por WhatsApp → el día del servicio se paga el resto.
 - **Texto para la web:** *"Asegura tu silla con RD$200. Se descuenta de tu servicio. Si cancelas con 2 horas de anticipación, queda como crédito."*
 
@@ -194,7 +185,7 @@ Reglas: 60 % base (negro o crema), 30 % azul/gris, 10 % rojo (solo para lo que s
 **Opción A — "Barbería clásica de barrio"** ⭐ *recomendada*
 - Títulos: **Alfa Slab One** (letra gruesa con remates tipo letrero antiguo de barbería)
 - Textos: **Inter** (muy legible en el celular)
-- Acento opcional: **Pacifico** solo para la palabra *"Family"* en el logo
+- Acento opcional: **Pacifico** solo para una palabra destacada del título (en la demo: *"diferencia."*)
 - *Por qué atrae:* recuerda los letreros pintados a mano de las barberías de siempre (tradición y confianza), y el texto limpio la hace ver profesional y moderna. Se reconoce de lejos en redes.
 
 **Opción B — "Urbana y moderna"**
@@ -208,10 +199,10 @@ Reglas: 60 % base (negro o crema), 30 % azul/gris, 10 % rojo (solo para lo que s
 - *Por qué atrae:* transmite elegancia y tradición familiar, ideal si quieres subir el ticket promedio (paquete VIP, novios, eventos). Atrae a padres y adultos de 30–55 años.
 
 ### Logo y estilo general
-- **Logo:** escudo o sello circular con un poste de barbero o unas tijeras en el centro; arriba *THE FAMILY*, abajo *BARBERSHOP*, y un detalle "Av. República de Colombia · SD". Versión horizontal para la web y versión cuadrada para el perfil de redes.
+- **Logo:** usar el logo actual de Express Barber (corona, alas y barbero con barba, "Barbería y Salón · 2023") en blanco sobre negro, con el nombre EXPRESS en blanco y BARBER en rojo. Versión horizontal para la web y versión cuadrada para el perfil de redes.
 - **Fotografía:** luz cálida, gente real (padres e hijos, abuelos, el barbero riendo con el cliente). Evita fotos de banco de imágenes.
 - **Elementos gráficos:** franjas diagonales rojo-blanco-azul como separadores, texturas suaves de papel o madera en fondo crema.
-- **Tono de voz:** cercano y dominicano sin exagerar: "¡Te esperamos, familia!", "Tu silla está lista", "Aquí el corte se hace con cariño".
+- **Tono de voz:** cercano y dominicano sin exagerar: "Un corte hace la diferencia", "Tu silla está lista", "Estilo, precisión y actitud".
 - **Aplicaciones físicas:** delantales con el logo, tarjeta de fidelidad, letrero con código QR "Reserva aquí" y "Déjanos tu reseña".
 
 ---
@@ -231,7 +222,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 | **Clientes con su resultado** | Foto del cliente en la silla con su corte + etiqueta (pídeles permiso) | Historia + post |
 | **Conoce al barbero** | "Un día con [nombre]", su corte favorito, preguntas rápidas | Reel |
 | **Consejos** | "3 cortes que favorecen a cara redonda", "Cómo cuidar tu barba en el calor" | Carrusel / TikTok |
-| **Promociones** | "Lunes de familia: 15 % en paquetes", "Quedan 3 turnos hoy" | Historia + estado de WhatsApp |
+| **Promociones** | "Lunes a jueves: cortes a RD$600", "Quedan 3 turnos hoy" | Historia + estado de WhatsApp |
 | **Reseñas** | Captura de una reseña de Google convertida en diseño | Post + historia |
 | **Tendencias** | Audios virales adaptados a la barbería, retos de cortes | TikTok |
 
@@ -241,27 +232,27 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 |---|---|---|
 | Instagram | 4 Reels + 1 carrusel por semana; historias **todos los días** (agenda del día, turnos libres) | Galería y reservas |
 | TikTok | 4–5 videos por semana (se pueden reutilizar los Reels sin marca de agua) | Alcance a gente nueva |
-| Facebook | 3 publicaciones por semana (comparte los Reels) + publica en grupos de la comunidad (vecinos de la Av. República de Colombia, Distrito Nacional, etc.) | Público adulto y padres |
+| Facebook | 3 publicaciones por semana (comparte los Reels) + publica en grupos de la comunidad (vecinos de Piantini, Naco, Bella Vista y Evaristo Morales, etc.) | Público adulto y padres |
 | WhatsApp Business | Estado diario + lista de difusión 1 vez por semana (máximo) | Clientes fijos |
 | Google Business Profile | 1 publicación semanal + fotos nuevas cada semana | SEO local |
 
 **Calendario semanal de ejemplo:**
-- **Lunes:** promo "Lunes de familia" · **Martes:** consejo · **Miércoles:** antes/después · **Jueves:** conoce al barbero · **Viernes:** "Turnos libres del fin de semana" · **Sábado:** historias en vivo del ambiente · **Domingo:** foto familiar o reseña de la semana.
+- **Lunes:** promo "Lunes a jueves a RD$600" · **Martes:** consejo · **Miércoles:** antes/después · **Jueves:** conoce al barbero · **Viernes:** "Turnos libres del fin de semana" · **Sábado:** historias en vivo del ambiente · **Domingo:** foto familiar o reseña de la semana.
 
 > Truco práctico: graba todo el sábado (día lleno) y edita con CapCut para tener contenido de toda la semana.
 
 ### Conectar redes con la web
-- **Bio de Instagram/TikTok:** "💈 Barbería familiar · Av. República de Colombia, SD · 📅 Reserva aquí 👇" + enlace directo a la página de reservas (no a la portada).
+- **Bio de Instagram/TikTok:** "💈 Un corte hace la diferencia · Plaza Central, Piantini · 🏠 A domicilio · 📅 Reserva aquí 👇" + enlace directo a la página de reservas (no a la portada).
 - Activa el botón **"Reservar"** de Instagram y Facebook (botón de acción) apuntando a tu página de reservas o a WhatsApp.
 - **Feed de Instagram integrado** en la web (plugin *Smash Balloon* en WordPress, o widget de *Elfsight/Behold*).
-- Cada video termina con la misma frase: *"Reserva por el link de la bio o escríbenos al 809-372-5952."*
+- Cada video termina con la misma frase: *"Reserva por el link de la bio o escríbenos al 809-229-8089."*
 - Usa enlaces con etiquetas UTM (ej.: `?utm_source=instagram`) para saber de qué red llegan las reservas.
 
 ### Convertir reseñas de Google en contenido
 1. Elige una reseña de 5 estrellas por semana.
 2. Diséñala en Canva: fondo crema, estrellas doradas, texto de la reseña, nombre del cliente con inicial ("— Juan P.") y foto de su corte si la tienes.
-3. Publícala como post + historia con el texto: *"Esto es lo que dice la familia ❤️ ¿Ya nos dejaste tu reseña?"* + enlace.
-4. Responde **todas** las reseñas en Google en menos de 48 horas, usando el nombre del cliente y la palabra clave: *"¡Gracias, Juan! Siempre es un placer atenderte en nuestra barbería de la Av. República de Colombia. ¡Te esperamos, familia!"*
+3. Publícala como post + historia con el texto: *"Esto es lo que dicen nuestros clientes 🔥 ¿Ya nos dejaste tu reseña?"* + enlace.
+4. Responde **todas** las reseñas en Google en menos de 48 horas, usando el nombre del cliente y la palabra clave: *"¡Gracias, Juan! Siempre es un placer atenderte en nuestra barbería de Plaza Central. ¡Te esperamos!"*
 5. Meta: llegar a **100 reseñas** en 6 meses con el mensaje `/gracias` y un código QR en el espejo.
 
 ---
@@ -283,14 +274,14 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 ### SEO local
 
 **Palabras clave principales:**
-- barbería en Santo Domingo · barbería Avenida República de Colombia · barbero Distrito Nacional · barbería cerca de mí · barbería para niños Santo Domingo · corte de pelo hombre Santo Domingo · fade Santo Domingo · barbería familiar
+- barbería en Santo Domingo · barbería Plaza Central · barbería Piantini · barbero a domicilio Santo Domingo · barbería cerca de mí · barbería para niños Santo Domingo · corte de pelo hombre Santo Domingo · fade Santo Domingo · barbería familiar
 
 **Dónde ponerlas (ejemplos listos):**
-- **Título de la página (title):** `The Family BarberShop | Barbero en Santo Domingo, Av. República de Colombia`
-- **Meta descripción:** `Barbería familiar en la Avenida República de Colombia, Santo Domingo. Cortes, barba y paquetes para toda la familia. Abierto hasta las 9 p. m. Reserva en línea o por WhatsApp.`
-- **H1:** `Barbería familiar en la Avenida República de Colombia, Santo Domingo`
-- **H2 de servicios:** `Cortes, barba y tratamientos para toda la familia`
-- **Nombres de imágenes y texto alternativo:** `fade-degradado-barberia-republica-de-colombia.jpg` → alt: "Corte degradado en The Family BarberShop, Av. República de Colombia"
+- **Título de la página (title):** `Express Barber | Barbería en Plaza Central, Piantini, Santo Domingo`
+- **Meta descripción:** `Express Barber: barbería en Plaza Central, primer nivel, Piantini. Cortes fade, barba, tinte y facial. Servicio a domicilio. Reserva por WhatsApp al 809-229-8089.`
+- **H1:** `Barbería en Plaza Central, Piantini, Santo Domingo`
+- **H2 de servicios:** `Cortes, barba y cuidado para ti`
+- **Nombres de imágenes y texto alternativo:** `fade-degradado-barberia-piantini.jpg` → alt: "Corte fade en Express Barber, Plaza Central, Piantini"
 - **Datos estructurados (schema.org):** tipo `HairSalon` (Google no tiene tipo "Barbería" en schema) con nombre, dirección, teléfono, horario y coordenadas. No marques tus propias reseñas para mostrar estrellas: Google no las muestra para negocios locales.
 - **NAP consistente:** mismo nombre, dirección y teléfono (exactamente igual) en web, Google, Facebook, Instagram, directorios (Páginas Amarillas RD, Apple Maps/Business Connect, Bing Places, Waze).
 - **Blog/guías sencillas (1 al mes):** "Mejores cortes para niños para el regreso a clases", "Cómo elegir corte según tu cara".
@@ -303,7 +294,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 - [ ] Botón de **"Reservar"** con el enlace de tu página de reservas; botón de mensaje/WhatsApp.
 - [ ] Servicios con precios cargados (los de la sección 0).
 - [ ] Atributos: "Acepta tarjetas de crédito", "Apto para niños", "Con cita previa", "Wi-Fi", etc.
-- [ ] Descripción (750 caracteres) con palabras clave: *"The Family BarberShop es una barbería familiar en la Avenida República de Colombia, Santo Domingo…"*
+- [ ] Descripción (750 caracteres) con palabras clave: *"Express Barber es una barbería en Plaza Central, primer nivel, Piantini, Santo Domingo…"*
 - [ ] **Fotos:** fachada (para que la reconozcan al llegar), interior, equipo, 20+ cortes. Sube 3–5 fotos nuevas cada semana.
 - [ ] Publicaciones semanales (ofertas, eventos, novedades).
 - [ ] Preguntas y respuestas: publica y responde tú mismo las dudas frecuentes ("¿Atienden niños?", "¿Hay parqueo?", "¿Aceptan tarjeta?").
@@ -312,7 +303,7 @@ Ejemplo: `@thefamilybarbershop2` o `@familybarber.villasclaudia` (verifica dispo
 
 ### Llamados a la acción en toda la web
 - Botón fijo en el celular: **📅 Reservar** + **💬 WhatsApp**.
-- Después de cada sección, un CTA distinto: Servicios → "Reservar este servicio"; Galería → "Quiero este corte"; Barberos → "Reservar con Carlos"; Reseñas → "Únete a la familia"; Mapa → "Cómo llegar".
+- Después de cada sección, un CTA distinto: Servicios → "Reservar este servicio"; Galería → "Quiero este corte"; Barberos → "Reservar con Carlos"; Reseñas → "Déjanos tu reseña"; Mapa → "Cómo llegar".
 - Prueba social junto a los botones: "⭐ [calificación] · [número] reseñas en Google" (con los datos reales del perfil).
 - Urgencia real (no inventada): "Sábado casi lleno — quedan 4 turnos".
 
