@@ -10,6 +10,8 @@
   // La demo siempre empieza arriba: sin restaurar el scroll anterior ni saltar a una #sección
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  // Entrada: las puertas de la barbería se abren al llegar (no se muestra con "reducir movimiento")
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("con-puertas", "bloqueo");
   let movidoPorUsuario = false;
   ["wheel", "touchstart", "keydown"].forEach(ev => addEventListener(ev, () => movidoPorUsuario = true, {once:true, passive:true}));
   const irAlInicio = () => { if (!movidoPorUsuario) scrollTo({top:0, left:0, behavior:"instant"}); };
@@ -76,8 +78,9 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(21,21,21,.96);backdr
 .hero h1 .script{color:var(--dorado);font-size:.9em}
 .hero p.lead{font-size:clamp(1.05rem,2vw,1.25rem);max-width:520px;margin:1.2rem 0 2rem;opacity:.92}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.hero-rating{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.4rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.45rem .9rem;border-radius:999px;font-size:.92rem}
+.hero-rating{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:1.4rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.45rem .9rem;border-radius:999px;font-size:.92rem}
 .stars{color:var(--dorado);letter-spacing:2px}
+@media (max-width:560px){.hero-rating{display:block;border-radius:14px;font-size:.86rem;line-height:1.7}}
 
 /* Barra de confianza */
 .trust{margin-top:-56px;position:relative;z-index:2;padding:0}
@@ -253,6 +256,52 @@ footer a:hover{color:var(--dorado)}
 /* Letras en relieve */
 .hero h1 .script{text-shadow:1px 1px 0 #a5842f,2px 2px 0 #8f7128,3px 3px 0 #7a5f22,4px 4px 0 #644e1c,6px 9px 16px rgba(0,0,0,.55)}
 
+/* Entrada: las puertas de la barbería se abren */
+.puertas{display:none}
+html.bloqueo{overflow:hidden}
+html.con-puertas .puertas{display:block;position:fixed;inset:0;z-index:100;perspective:1700px;perspective-origin:50% 42%;cursor:pointer;transition:opacity .8s ease}
+.puertas.fuera{opacity:0;pointer-events:none}
+.puertas-marco{position:absolute;inset:0;display:flex;transform-style:preserve-3d;animation:aparecer .9s ease both;transition:transform 2.2s cubic-bezier(.55,.05,.25,1)}
+.puertas.abiertas .puertas-marco{transform:scale(1.2)}
+.puerta{position:relative;width:50%;height:100%;transform-style:preserve-3d;
+  background:linear-gradient(115deg,rgba(255,255,255,.07),rgba(255,255,255,0) 28%,rgba(255,255,255,.035) 52%,rgba(255,255,255,0) 62%),repeating-linear-gradient(90deg,#0a0a0a 0 3px,#0f0f0f 3px 6px);
+  transition:transform 1.8s cubic-bezier(.65,.02,.25,1)}
+.puerta.izq{transform-origin:left center;box-shadow:inset -1px 0 0 rgba(201,165,76,.6)}
+.puerta.der{transform-origin:right center;box-shadow:inset 1px 0 0 rgba(201,165,76,.6)}
+.puertas.abiertas .puerta.izq{transform:rotateY(-108deg)}
+.puertas.abiertas .puerta.der{transform:rotateY(108deg)}
+.puerta::before{content:"";position:absolute;inset:7vh clamp(14px,4vw,56px);border:1px solid rgba(201,165,76,.55);outline:1px solid rgba(200,16,46,.3);outline-offset:7px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01) 40%,rgba(255,255,255,.05) 70%,rgba(255,255,255,0))}
+.puerta::after{content:"";position:absolute;inset:0;background:#000;opacity:0;transition:opacity 1.8s ease}
+.puertas.abiertas .puerta::after{opacity:.7}
+.manija{position:absolute;top:70%;width:7px;height:min(22vh,190px);transform:translateY(-50%);border-radius:4px;overflow:hidden;background:linear-gradient(90deg,#4d4d4d,#f2f2f2 40%,#8a8a8a 62%,#d6d6d6);box-shadow:0 0 14px rgba(0,0,0,.7)}
+.izq .manija{right:clamp(16px,2.6vw,36px)}
+.der .manija{left:clamp(16px,2.6vw,36px)}
+.manija::after{content:"";position:absolute;left:0;right:0;top:-45%;height:45%;background:linear-gradient(transparent,rgba(255,255,255,.95),transparent);animation:brilloManija 1.2s ease .7s forwards}
+.medio-logo{position:absolute;top:40%;width:clamp(62px,8vw,92px);height:clamp(124px,16vw,184px);transform:translateY(-50%);overflow:hidden;animation:aparecerLogo 1s cubic-bezier(.2,.8,.2,1) .2s both}
+.izq .medio-logo{right:0}
+.der .medio-logo{left:0}
+.medio-logo img{position:absolute;top:0;width:200%;max-width:none;height:100%;border-radius:50%;border:3px solid var(--rojo);box-sizing:border-box;object-fit:cover}
+.izq .medio-logo img{left:0}
+.der .medio-logo img{right:0}
+.puerta-nombre{position:absolute;top:calc(40% + clamp(80px,10vw,116px));font:800 clamp(1.35rem,4.2vw,3.1rem)/1 Inter,sans-serif;letter-spacing:.14em;animation:aparecer .9s ease .5s both}
+.izq .puerta-nombre{right:clamp(8px,1.2vw,16px);color:#fff}
+.der .puerta-nombre{left:clamp(10px,1.4vw,18px);color:var(--rojo)}
+.puertas-titulo,.puertas-lema,.puertas-pista{position:absolute;left:0;right:0;text-align:center;z-index:3;pointer-events:none;transition:opacity .4s ease}
+.puertas-titulo{top:calc(40% - clamp(110px,14vw,150px));color:var(--dorado);font:600 .8rem Inter,sans-serif;letter-spacing:.55em;text-transform:uppercase;animation:aparecer .9s ease .3s both}
+.puertas-lema{top:calc(40% + clamp(132px,16vw,180px));color:#bdb6aa;font:600 .72rem Inter,sans-serif;letter-spacing:.4em;text-transform:uppercase;animation:aparecer .9s ease .8s both}
+.puertas-pista{bottom:28px;color:#8d877c;font:500 .8rem Inter,sans-serif;letter-spacing:.08em;animation:aparecer .9s ease 1s both}
+.puertas.abiertas .puertas-titulo,.puertas.abiertas .puertas-lema,.puertas.abiertas .puertas-pista{animation:desaparecer .45s ease forwards}
+.puertas-luz{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 38% 62% at 50% 45%,rgba(255,232,190,.85),rgba(201,165,76,.3) 42%,transparent 75%);opacity:0;transition:opacity 1.2s ease .25s}
+.puertas.abiertas .puertas-luz{opacity:1}
+.puertas.fuera .puertas-luz{opacity:0;transition-delay:0s}
+.puertas-saltar{position:absolute;top:16px;right:16px;z-index:4;background:rgba(0,0,0,.5);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:.5rem 1rem;font:600 .85rem Inter,sans-serif;cursor:pointer}
+html.entrando .hero{animation:entrarSitio 2s cubic-bezier(.2,.8,.2,1)}
+@keyframes aparecer{from{opacity:0}to{opacity:1}}
+@keyframes desaparecer{from{opacity:1}to{opacity:0}}
+@keyframes aparecerLogo{from{opacity:0;transform:translateY(-50%) scale(.85)}to{opacity:1;transform:translateY(-50%)}}
+@keyframes brilloManija{to{top:110%}}
+@keyframes entrarSitio{from{transform:scale(1.1);filter:brightness(1.35)}to{transform:none;filter:none}}
+
 /* Servicio a domicilio */
 .domicilio{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px;background:var(--negro);color:#d8d2c6;border-radius:var(--radio);padding:22px 24px}
 .domicilio b{color:#fff;font-size:1.1rem}
@@ -314,6 +363,44 @@ main{overflow-x:clip}
 </style>
 </head>
 <body>
+
+<!-- ENTRADA: LAS PUERTAS SE ABREN -->
+<div class="puertas" id="puertas" role="dialog" aria-label="Bienvenido a Express Barber">
+  <div class="puertas-marco">
+    <div class="puerta izq">
+      <div class="medio-logo"><img src="media/ig/logo.jpg" alt=""></div>
+      <span class="puerta-nombre">EXPRESS</span>
+      <span class="manija"></span>
+    </div>
+    <div class="puerta der">
+      <div class="medio-logo"><img src="media/ig/logo.jpg" alt=""></div>
+      <span class="puerta-nombre">BARBER</span>
+      <span class="manija"></span>
+    </div>
+  </div>
+  <p class="puertas-titulo">Bienvenido</p>
+  <p class="puertas-lema">Estilo · Precisión · Actitud</p>
+  <p class="puertas-pista">Toca para entrar</p>
+  <div class="puertas-luz"></div>
+  <button class="puertas-saltar" type="button">Saltar ✕</button>
+</div>
+<script>
+// Las puertas se abren solas 1.5 s después de que la página está lista, o antes con un toque, Enter o Esc
+(function(){
+  const raiz = document.documentElement, p = document.getElementById("puertas");
+  if (!raiz.classList.contains("con-puertas")) return;
+  let abiertas = false;
+  const abrir = () => {
+    if (abiertas) return; abiertas = true;
+    p.classList.add("abiertas"); raiz.classList.add("entrando");
+    setTimeout(() => { p.classList.add("fuera"); raiz.classList.remove("bloqueo"); }, 1500);
+    setTimeout(() => { p.remove(); raiz.classList.remove("con-puertas"); }, 2400);
+  };
+  addEventListener("DOMContentLoaded", () => setTimeout(abrir, 1500));
+  p.addEventListener("click", abrir);
+  addEventListener("keydown", e => { if (e.key === "Enter" || e.key === "Escape") abrir(); });
+})();
+</script>
 
 <div class="demo-bar">DEMO de presentación · Fotos del Instagram de Express Barber · Los barberos son de ejemplo</div>
 
