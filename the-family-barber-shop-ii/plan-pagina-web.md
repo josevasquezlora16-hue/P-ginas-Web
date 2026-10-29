@@ -1,6 +1,6 @@
 # Express Barber — Plan de página web, marca y crecimiento
 
-> Barbería · Plaza Central, primer nivel, frente a Óptica López (dentro de Hollywood), Piantini, Santo Domingo
+> Barbería · Plaza Central, primer nivel, frente a Óptica López (dentro de Hollywood), Av. 27 de Febrero, Piantini, Santo Domingo 10100 · Google: ⭐ 5.0 (22 opiniones)
 > Tel./WhatsApp: (809) 229-8089 · Instagram: [@express_barber01](https://www.instagram.com/express_barber01/) · Reservas: atom.bio/expressbarber
 > Horario: lunes a sábado de 9:00 a.m. a 8:00 p.m. · domingo de 10:00 a.m. a 8:00 p.m. · Servicio a domicilio en zonas premium
 
@@ -51,6 +51,8 @@ Todo el sitio, las redes y las promociones giran alrededor de esa idea: cortes f
 **Promociones vigentes (de su Instagram):** cortes a RD$600 de lunes a jueves · **Experiencia premium a domicilio** en Piantini, Naco, Bella Vista, Serrallés, Evaristo Morales, Los Cacicazgos, Julieta Morales y Arroyo Hondo Viejo (con cita).
 
 **Paquetes opcionales** (idea para subir el ticket promedio, no están en su lista actual): padre e hijo, dos hermanos el mismo día, o una membresía mensual de 4 cortes.
+
+Cada corte dura **aproximadamente 35 minutos**, así que el calendario de reservas ofrece turnos cada 35 minutos.
 
 > Ajusta los precios comparando con 3–4 barberías cercanas. Consulta con tu contador si los precios deben mostrarse con ITBIS incluido.
 

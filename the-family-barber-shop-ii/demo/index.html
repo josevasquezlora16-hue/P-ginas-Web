@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Express Barber | Barbería en Plaza Central, Piantini, Santo Domingo</title>
-<meta name="description" content="Express Barber: barbería en Plaza Central, primer nivel, Piantini. Cortes fade, barba, tinte y facial. Servicio a domicilio. Reserva por WhatsApp al 809-229-8089.">
+<meta name="description" content="Express Barber: barbería en Plaza Central, primer nivel, Piantini. Cortes fade, barba, tinte y facial. Servicio a domicilio. ⭐ 5.0 en Google (22 opiniones). Reserva por WhatsApp al 809-229-8089.">
 <meta name="robots" content="noindex">
 <script>
   // La demo siempre empieza arriba: sin restaurar el scroll anterior ni saltar a una #sección
@@ -99,6 +99,7 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(21,21,21,.96);backdr
 .serv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
 .serv{background:#fff;border-radius:var(--radio);padding:24px;display:flex;flex-direction:column;gap:6px;position:relative;border:2px solid transparent;transition:border-color .15s,transform .15s}
 .serv:hover{border-color:var(--dorado);transform:translateY(-3px)}
+.serv .meta{font-size:.85rem;color:#777}
 .serv h3{font-size:1.2rem}
 .serv .desc{font-size:.92rem;flex:1}
 .serv .precio{font-family:"Alfa Slab One",serif;color:var(--azul);font-size:1.35rem;margin:8px 0 12px}
@@ -192,6 +193,8 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(21,21,21,.96);backdr
 .resena::before{content:"“";position:absolute;top:-6px;right:18px;font-family:"Alfa Slab One",serif;font-size:4.5rem;color:var(--crema-2)}
 .resena p{margin:.6rem 0 1rem;font-size:.97rem}
 .resena .autor{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--negro);font-size:.92rem}
+.resena-cta{background:var(--negro);color:#d8d2c6;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.resena-cta::before{color:#2a2a2a}
 .resena .ini{width:36px;height:36px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;font-weight:700}
 .etiqueta-ej{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--crema);padding:.15rem .5rem;border-radius:6px;color:#8a7a5c}
 
@@ -376,7 +379,7 @@ main{overflow-x:clip}
 })();
 </script>
 
-<div class="demo-bar">DEMO de presentación · Fotos del Instagram de Express Barber · Los barberos y las reseñas son de ejemplo</div>
+<div class="demo-bar">DEMO de presentación · Fotos del Instagram de Express Barber · Los barberos son de ejemplo</div>
 
 <header class="nav">
   <div class="wrap nav-in">
@@ -406,7 +409,7 @@ main{overflow-x:clip}
   <button class="video-btn" id="video-btn" type="button" aria-label="Pausar el video">❚❚</button>
   <div class="wrap hero-grid">
    <div class="hero-txt">
-    <div class="hero-rating">💈 <b>Barbería en Plaza Central, Piantini</b> · <span id="chip-horario">Cierra a las 8:00 p.m.</span></div>
+    <div class="hero-rating"><span class="stars">★★★★★</span> <b>5.0</b> en Google · 22 opiniones · <span id="chip-horario">Cierra a las 8:00 p.m.</span></div>
     <h1>Un corte hace la <span class="script">diferencia.</span></h1>
     <p class="lead">Plaza Central, primer nivel, frente a Óptica López. Cortes fade limpios, modernos y a tu estilo. ¿No puedes venir? Vamos a tu casa.</p>
     <div class="hero-ctas">
@@ -424,7 +427,7 @@ main{overflow-x:clip}
 <!-- CONFIANZA -->
 <div class="trust">
   <div class="wrap trust-grid">
-    <div class="trust-item"><span class="trust-ico">⭐</span><div><b>Reseñas en Google</b><span>Opiniones de clientes reales</span></div></div>
+    <div class="trust-item"><span class="trust-ico">⭐</span><div><b>5.0 en Google</b><span>22 opiniones reales</span></div></div>
     <div class="trust-item"><span class="trust-ico">🕘</span><div><b id="estado-abierto">Abierto hoy</b><span id="estado-detalle">Cierra a las 8:00 p.m.</span></div></div>
     <div class="trust-item"><span class="trust-ico">💳</span><div><b>Paga como quieras</b><span>Tarjeta, transferencia o efectivo</span></div></div>
     <div class="trust-item"><span class="trust-ico">🏠</span><div><b>Servicio a domicilio</b><span>Piantini, Naco, Bella Vista y más</span></div></div>
@@ -560,16 +563,14 @@ main{overflow-x:clip}
       <h2>Lo que dicen nuestros clientes</h2>
     </div>
     <div class="rating-big">
-      <div><div class="stars">★★★★★</div><b style="color:var(--negro)">Opiniones de nuestros clientes en Google</b></div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Express+Barber+Plaza+Central+Piantini+Santo+Domingo" target="_blank" rel="noopener" class="btn btn-sm" style="background:var(--negro);color:#fff;margin-left:auto">Ver todas en Google</a>
+      <span class="rating-num">5.0</span>
+      <div><div class="stars">★★★★★</div><b style="color:var(--negro)">22 opiniones en Google</b></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=EXPRESS+BARBER+Av+27+de+Febrero+Santo+Domingo+10100" target="_blank" rel="noopener" class="btn btn-sm" style="background:var(--negro);color:#fff;margin-left:auto">Ver todas en Google</a>
     </div>
     <div class="resenas">
-      <article class="resena"><span class="stars">★★★★★</span><p>Aquí irá una reseña real de Google: por ejemplo, un cliente contando que siempre sale con el corte que pidió.</p><div class="autor"><span class="ini">J</span>Juan P. <span class="etiqueta-ej">Ejemplo</span></div></article>
-      <article class="resena"><span class="stars">★★★★★</span><p>Aquí irá otra reseña real destacando la atención, la puntualidad o lo bien que tratan a los niños.</p><div class="autor"><span class="ini">M</span>María R. <span class="etiqueta-ej">Ejemplo</span></div></article>
-      <article class="resena"><span class="stars">★★★★★</span><p>Y una tercera sobre la calidad del fade o de la barba. Se eligen las mejores y se actualizan cada mes.</p><div class="autor"><span class="ini">C</span>Carlos D. <span class="etiqueta-ej">Ejemplo</span></div></article>
-    </div>
-    <div style="text-align:center;margin-top:32px">
-      <a href="https://www.google.com/maps/search/?api=1&query=Express+Barber+Plaza+Central+Piantini+Santo+Domingo" target="_blank" rel="noopener" class="btn btn-rojo">⭐ Déjanos tu reseña</a>
+      <article class="resena"><span class="stars">★★★★★</span><p>muy buen trabajo me encanto llevare a mi hijo seguido😊</p><div class="autor"><span class="ini">Y</span>Yildary V. <span class="etiqueta-ej">Google · hace 5 meses</span></div></article>
+      <article class="resena"><span class="stars">★★★★★</span><p>El trabajo es uno 1️⃣ A sin duda, los recomiendo!</p><div class="autor"><span class="ini">A</span>Alejandro V. <span class="etiqueta-ej">Google · hace 5 meses</span></div></article>
+      <article class="resena resena-cta"><span class="stars">★★★★★</span><p>¿Ya te cortaste con nosotros? Cuéntale a otros cómo te fue: tu opinión nos ayuda a crecer.</p><a href="https://www.google.com/maps/search/?api=1&query=EXPRESS+BARBER+Av+27+de+Febrero+Santo+Domingo+10100" target="_blank" rel="noopener" class="btn btn-rojo btn-sm">Escribir mi reseña</a></article>
     </div>
   </div>
 </section>
@@ -612,17 +613,17 @@ main{overflow-x:clip}
     <div class="ubic">
       <div class="ubic-info">
         <dl>
-          <div><dt>📍 Dirección</dt><dd>Plaza Central, primer nivel, frente a Óptica López (dentro de Hollywood), Piantini, Santo Domingo</dd></div>
+          <div><dt>📍 Dirección</dt><dd>Plaza Central, primer nivel, frente a Óptica López (dentro de Hollywood), Av. 27 de Febrero, Piantini, Santo Domingo 10100</dd></div>
           <div><dt>📞 Teléfono y WhatsApp</dt><dd><a href="tel:+18092298089">(809) 229-8089</a></dd></div>
           <div><dt>🕘 Horario</dt><dd><table class="horario" id="tabla-horario"></table></dd></div>
         </dl>
         <div class="ubic-btns">
-          <a class="btn btn-sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Plaza%20Central%2C%20Piantini%2C%20Santo%20Domingo">🗺️ Cómo llegar</a>
-          <a class="btn btn-sm" target="_blank" rel="noopener" href="https://waze.com/ul?q=Plaza%20Central%2C%20Piantini%2C%20Santo%20Domingo&navigate=yes">🚗 Abrir en Waze</a>
+          <a class="btn btn-sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Express%20Barber%2C%20Plaza%20Central%2C%20Av.%2027%20de%20Febrero%2C%20Santo%20Domingo%2010100">🗺️ Cómo llegar</a>
+          <a class="btn btn-sm" target="_blank" rel="noopener" href="https://waze.com/ul?q=Plaza%20Central%2C%20Av.%2027%20de%20Febrero%2C%20Santo%20Domingo&navigate=yes">🚗 Abrir en Waze</a>
         </div>
       </div>
       <div class="mapa">
-        <iframe title="Mapa de Express Barber en Plaza Central" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Plaza%20Central%2C%20Piantini%2C%20Santo%20Domingo&z=17&output=embed"></iframe>
+        <iframe title="Mapa de Express Barber en Plaza Central" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Express%20Barber%2C%20Plaza%20Central%2C%20Av.%2027%20de%20Febrero%2C%20Santo%20Domingo%2010100&z=17&output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -655,7 +656,7 @@ main{overflow-x:clip}
       </div>
       <div>
         <h4>Visítanos</h4>
-        <p>Plaza Central, primer nivel<br>Frente a Óptica López, Piantini<br>Santo Domingo</p>
+        <p>Plaza Central, primer nivel<br>Frente a Óptica López, Av. 27 de Febrero<br>Piantini, Santo Domingo 10100</p>
         <p style="margin-top:8px"><a href="tel:+18092298089">(809) 229-8089</a></p>
       </div>
       <div>
@@ -679,9 +680,9 @@ main{overflow-x:clip}
 <script>
 const WA = "18092298089";
 const SERVICIOS = [
-  {id:"corte", nombre:"Corte de pelo adulto", min:40, precio:600, desc:"Fade, clásico o a tijera. Limpio, moderno y a tu estilo."},
-  {id:"corte-barba", nombre:"Corte de pelo y barba", min:60, precio:800, desc:"El combo completo: corte a tu gusto y barba perfilada.", badge:"Más pedido"},
-  {id:"infantil", nombre:"Corte de pelo infantil", min:30, precio:500, desc:"Para los más pequeños de la casa, con paciencia y estilo."},
+  {id:"corte", nombre:"Corte de pelo adulto", min:35, aprox:true, precio:600, desc:"Fade, clásico o a tijera. Limpio, moderno y a tu estilo."},
+  {id:"corte-barba", nombre:"Corte de pelo y barba", min:35, aprox:true, precio:800, desc:"El combo completo: corte a tu gusto y barba perfilada.", badge:"Más pedido"},
+  {id:"infantil", nombre:"Corte de pelo infantil", min:35, aprox:true, precio:500, desc:"Para los más pequeños de la casa, con paciencia y estilo."},
   {id:"barba", nombre:"Barba", min:20, precio:350, desc:"Perfilado, rebaje y contornos con navaja."},
   {id:"tinte-barba", nombre:"Tintado de barba", min:30, precio:500, desc:"Color parejo para una barba con más presencia."},
   {id:"facial", nombre:"Facial", min:30, precio:500, desc:"Limpieza e hidratación para tu piel."},
@@ -707,6 +708,7 @@ function pintarServicios(){
     <article class="serv">
       ${s.badge?`<span class="badge ${s.dorado?"dorado":""}">${s.badge}</span>`:""}
       <h3>${s.nombre}</h3>
+      ${s.aprox?`<span class="meta">⏱ aprox. ${s.min} min</span>`:""}
       <p class="desc">${s.desc}</p>
       <div class="precio">${rd(s.precio)} <small>${s.sufijo||""}</small></div>
       <a href="#reservar" class="btn btn-rojo btn-sm" data-reservar="${s.id}">Reservar este servicio</a>
@@ -751,8 +753,9 @@ $("op-dias").innerHTML = proxDias.map((d,i)=>`<button class="dia" data-d="${i}">
 
 function pintarHoras(){
   const d = proxDias[R.fecha], [a,c] = HORARIO[d.getDay()], s = SERVICIOS.find(x=>x.id===R.servicio);
-  const dur = s ? s.min/60 : .75, out = [];
-  for (let h=a; h+dur<=c+0.001; h+=0.75){
+  const paso = s ? s.min : 35, out = [];
+  for (let m=a*60; m+paso<=c*60; m+=paso){
+    const h = m/60;
     const pasado = R.fecha===0 && h <= hoy.getHours()+hoy.getMinutes()/60;
     // Ocupación simulada (determinística) para que la demo se vea realista
     const ocupado = ((d.getDate()*7 + Math.round(h*4)*3 + (R.barbero||"x").length) % 5) === 0;
